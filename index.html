@@ -28,6 +28,32 @@
     padding:7px 12px;border-radius:8px;cursor:pointer;font-size:12.5px}
   button.tool:hover{border-color:var(--pick)}
 
+  /* --- title-odds board --- */
+  .odds{max-width:1180px;margin:10px auto 2px;padding:0 20px}
+  .odds h2{font-size:13px;font-weight:600;letter-spacing:.3px;margin:0 0 8px;
+    color:var(--ink)}
+  .odds h2 .hint{color:var(--muted);font-weight:400;font-size:12px}
+  #odds-cond{color:var(--accent2)}
+  .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:5px 10px}
+  .orow{position:relative;display:flex;align-items:center;gap:6px;padding:4px 9px;
+    background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    overflow:hidden;font-size:12.5px}
+  .orow .obar{position:absolute;left:0;top:0;bottom:0;z-index:0;
+    background:linear-gradient(90deg,rgba(245,158,11,.30),rgba(245,158,11,.07));
+    transition:width .4s ease}
+  .orow.lead .obar{background:linear-gradient(90deg,rgba(34,197,94,.34),rgba(34,197,94,.08))}
+  .orow.dim{opacity:.5}
+  .orank{position:relative;z-index:1;color:var(--muted);font-size:10.5px;
+    min-width:16px;text-align:right;font-variant-numeric:tabular-nums}
+  .oflag{position:relative;z-index:1;font-size:14px}
+  .onm{position:relative;z-index:1;flex:1;white-space:nowrap;overflow:hidden;
+    text-overflow:ellipsis;font-weight:550}
+  .opct{position:relative;z-index:1;font-variant-numeric:tabular-nums;
+    font-weight:650;min-width:36px;text-align:right}
+  .oddsnote{max-width:1140px;color:var(--muted);font-size:11px;margin:8px 2px 0;line-height:1.45}
+  .odds.collapsed .board,.odds.collapsed .oddsnote{display:none}
+
   .scroll{overflow-x:auto;padding:14px 20px 40px}
   .bracket{display:flex;gap:30px;min-width:min-content;margin:0 auto;width:max-content}
   .round{display:flex;flex-direction:column}
@@ -83,8 +109,19 @@
   </div>
   <div class="toolbar">
     <button class="tool" id="reset">↺ Reset to most-likely</button>
+    <button class="tool" id="toggle-odds">📊 Hide title odds</button>
   </div>
 </header>
+
+<section class="odds" id="odds">
+  <h2>🏆 Win the Cup <span class="hint">— title odds from 500k bracket simulations
+    <span id="odds-cond"></span></span></h2>
+  <div class="board" id="oddsboard"></div>
+  <p class="oddsnote">Most likely champion overall — this can differ from the
+    favourite-at-every-step bracket below (one team can win most often without
+    being the favourite in every single round). Click teams in the bracket to
+    recompute these odds conditional on your picks.</p>
+</section>
 
 <div class="scroll">
   <div class="bracket" id="bracket"></div>
@@ -103,6 +140,40 @@ const SCALE = D.meta.elo_scale || 400;
 function pWin(a, b){
   const ra = TEAM[a].elo, rb = TEAM[b].elo;
   return 1 / (1 + Math.pow(10, -(ra - rb) / SCALE));
+}
+
+// Winner distribution for a node: team -> P(team wins this node). Mirrors the
+// exact propagation in simulate_bracket.py. A user pick forces that team to win
+// its match (prob 1 given it reached), so the surviving mass at the top equals
+// P(your picks all hold) and the normalised champion distribution is the title
+// odds *conditional on your picks*.
+function winnerDist(node){
+  if(node.fixed){
+    const a = node.home, b = node.away;
+    if(userPick[node.id] === a) return {[a]: 1};
+    if(userPick[node.id] === b) return {[b]: 1};
+    const p = pWin(a, b);
+    return {[a]: p, [b]: 1 - p};
+  }
+  const L = winnerDist(NODES[node.childA]);
+  const R = winnerDist(NODES[node.childB]);
+  const sumL = Object.values(L).reduce((s, x) => s + x, 0);
+  const sumR = Object.values(R).reduce((s, x) => s + x, 0);
+  const pick = userPick[node.id];
+  if(pick && (pick in L)) return {[pick]: L[pick] * sumR};  // beats whoever, ×P(opp exists)
+  if(pick && (pick in R)) return {[pick]: R[pick] * sumL};
+  const dist = {};
+  for(const t in L){ let pw = 0; for(const o in R) pw += R[o] * pWin(t, o); dist[t] = L[t] * pw; }
+  for(const t in R){ let pw = 0; for(const o in L) pw += L[o] * pWin(t, o); dist[t] = R[t] * pw; }
+  return dist;
+}
+
+function championOdds(){
+  const d = winnerDist(NODES[FINAL_ID]);
+  const s = Object.values(d).reduce((a, b) => a + b, 0) || 1;
+  const out = {};
+  for(const k in d) out[k] = d[k] / s;
+  return out;
 }
 
 // ---- bracket structure ---------------------------------------------------
@@ -206,10 +277,36 @@ function render(){
     bracketEl.appendChild(col);
   }
   renderChampion();
+  renderOdds();
   // attach handlers
   bracketEl.querySelectorAll(".slot[data-team]").forEach(el=>{
     el.addEventListener("click", ()=>onPick(el.dataset.node, el.dataset.team));
   });
+}
+
+function fmtPct(p){
+  if(p >= 0.0995) return Math.round(p*100) + "%";
+  if(p >= 0.01)   return (p*100).toFixed(1) + "%";
+  if(p > 0)       return "<1%";
+  return "0%";
+}
+
+function renderOdds(){
+  const dist = championOdds();
+  const teams = Object.keys(TEAM).sort((a,b)=>(dist[b]||0)-(dist[a]||0));
+  const lead = dist[teams[0]] || 0;
+  document.getElementById("oddsboard").innerHTML = teams.map((t,i)=>{
+    const p = dist[t] || 0, tt = TEAM[t];
+    const cls = (p>0 && p===lead) ? "lead" : (p < 0.005 ? "dim" : "");
+    return `<div class="orow ${cls}">
+       <span class="obar" style="width:${(p*100).toFixed(1)}%"></span>
+       <span class="orank">${i+1}</span>
+       <span class="oflag">${tt.flag||''}</span>
+       <span class="onm">${tt.short}</span>
+       <span class="opct">${fmtPct(p)}</span></div>`;
+  }).join("");
+  const anyPick = Object.keys(userPick).length > 0;
+  document.getElementById("odds-cond").textContent = anyPick ? " · conditional on your picks" : "";
 }
 
 function matchLine(a,b){
@@ -281,6 +378,11 @@ function prunePicks(){
 }
 
 document.getElementById("reset").onclick = ()=>{ userPick={}; render(); };
+document.getElementById("toggle-odds").onclick = (e)=>{
+  const el = document.getElementById("odds");
+  const hidden = el.classList.toggle("collapsed");
+  e.target.textContent = hidden ? "📊 Show title odds" : "📊 Hide title odds";
+};
 
 // ---- boot ----------------------------------------------------------------
 document.getElementById("subnote").textContent = D.meta.note;
