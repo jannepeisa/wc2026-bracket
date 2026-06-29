@@ -79,6 +79,14 @@
   .slot.adv .fill{background:linear-gradient(90deg,rgba(34,197,94,.34),rgba(34,197,94,.10))}
   .slot.tbd{cursor:default;color:var(--muted);font-style:italic}
   .slot.tbd:hover{border-color:var(--line)}
+  /* played results: winner solid, loser greyed; neither is clickable */
+  .slot.done{cursor:default;border-color:#2f7d50}
+  .slot.done:hover{border-color:#2f7d50}
+  .slot.done .fill{background:linear-gradient(90deg,rgba(34,197,94,.5),rgba(34,197,94,.18))}
+  .slot.done .pct{color:#9af5bd;font-weight:700}
+  .slot.done-lose{cursor:default;opacity:.5}
+  .slot.done-lose:hover{border-color:var(--line)}
+  .slot.done-lose .pct{color:var(--muted)}
   .slot .flag{position:relative;z-index:1;font-size:15px;width:18px;text-align:center}
   .slot .nm{position:relative;z-index:1;flex:1;white-space:nowrap;overflow:hidden;
     text-overflow:ellipsis;font-weight:550}
@@ -150,6 +158,7 @@ function pWin(a, b){
 function winnerDist(node){
   if(node.fixed){
     const a = node.home, b = node.away;
+    if(node.decided) return {[node.decided]: 1};        // actual result
     if(userPick[node.id] === a) return {[a]: 1};
     if(userPick[node.id] === b) return {[b]: 1};
     const p = pWin(a, b);
@@ -188,7 +197,8 @@ function buildTree(){
   let prev = [];
   D.r32.forEach((m, i) => {
     const id = "R0-"+i;
-    NODES[id] = {id, round:0, fixed:true, home:m.home, away:m.away, date:m.date};
+    NODES[id] = {id, round:0, fixed:true, home:m.home, away:m.away, date:m.date,
+                 decided:m.decided||null, score:m.score||null};
     prev.push(id);
   });
   let round = 1;
@@ -216,6 +226,7 @@ function teamsOf(node){
   return [winnerOf(NODES[node.childA]), winnerOf(NODES[node.childB])];
 }
 function winnerOf(node){
+  if(node.fixed && node.decided) return node.decided;   // actual result wins
   const [a,b] = teamsOf(node);
   if(!a || !b) return null;
   if(userPick[node.id] && (userPick[node.id]===a || userPick[node.id]===b))
@@ -231,14 +242,19 @@ function slotHTML(node, team, other, isAdv, isPicked){
     return `<div class="slot tbd"><span class="flag">·</span>
       <span class="nm">winner ${tbdLabel(node)}</span></div>`;
   }
-  const p = pWin(team, other);
   const t = TEAM[team];
-  return `<div class="slot ${isAdv?'adv':''} ${isPicked?'picked':''}"
-       data-node="${node.id}" data-team="${team}">
+  const decided = node.decided;
+  const won = decided && team === decided;
+  const p = decided ? (won ? 1 : 0) : pWin(team, other);
+  let cls = "";
+  if(decided) cls = won ? "adv done" : "done-lose";
+  else cls = (isAdv ? "adv" : "") + (isPicked ? " picked" : "");
+  const pct = decided ? (won ? "✓" : "out") : Math.round(p*100) + "%";
+  return `<div class="slot ${cls}" data-node="${node.id}" data-team="${team}">
      <span class="fill" style="width:${(p*100).toFixed(1)}%"></span>
      <span class="flag">${t.flag||''}</span>
      <span class="nm">${t.short}</span>
-     <span class="pct">${Math.round(p*100)}%</span>
+     <span class="pct">${pct}</span>
    </div>`;
 }
 function tbdLabel(node){
@@ -269,7 +285,7 @@ function render(){
       m.className = "match";
       const showPP = a && b;
       m.innerHTML =
-        (showPP?`<div class="pp">${matchLine(a,b)}</div>`:``) +
+        (showPP?`<div class="pp">${matchLine(node,a,b)}</div>`:``) +
         slotHTML(node, a, b, w===a, userPick[node.id]===a) +
         slotHTML(node, b, a, w===b, userPick[node.id]===b);
       body.appendChild(m);
@@ -309,7 +325,10 @@ function renderOdds(){
   document.getElementById("odds-cond").textContent = anyPick ? " · conditional on your picks" : "";
 }
 
-function matchLine(a,b){
+function matchLine(node,a,b){
+  if(node.decided){
+    return node.score ? `${node.score} · FT` : "FT";
+  }
   const p = pWin(a,b);
   return `${Math.round(p*100)}–${Math.round((1-p)*100)}`;
 }
@@ -351,6 +370,7 @@ function renderChampion(){
 // ---- interaction ---------------------------------------------------------
 function onPick(nodeId, team){
   const node = NODES[nodeId];
+  if(node.fixed && node.decided) return;   // can't override a played result
   const [a,b] = teamsOf(node);
   // toggle: clicking current pick/favourite clears override
   if(userPick[nodeId] === team){

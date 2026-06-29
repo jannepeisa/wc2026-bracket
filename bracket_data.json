@@ -1,4 +1,4 @@
-window.BRACKET_DATA = {
+{
  "meta": {
   "title": "World Cup 2026 — Knockout Bracket",
   "source": "TheOddsAPI consensus (de-margined) + calibrated Elo",
@@ -345,4 +345,4 @@ window.BRACKET_DATA = {
    "score": null
   }
  ]
-};
+}
