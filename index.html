@@ -30,9 +30,15 @@
 
   .scroll{overflow-x:auto;padding:14px 20px 40px}
   .bracket{display:flex;gap:30px;min-width:min-content;margin:0 auto;width:max-content}
-  .round{display:flex;flex-direction:column;justify-content:space-around;gap:var(--rowgap)}
-  .round-title{position:sticky;top:0;text-align:center;color:var(--muted);
-    font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:2px}
+  .round{display:flex;flex-direction:column}
+  .round-title{flex:0 0 auto;height:16px;margin-bottom:12px;text-align:center;
+    color:var(--muted);font-size:11px;letter-spacing:1.4px;text-transform:uppercase}
+  /* matches distribute in their own equal-height body (titles excluded), so a
+     parent match sits at the exact vertical midpoint of its two children. */
+  /* min-height gives space-around slack so the 16 R32 cells breathe; pure
+     space-around (no gap) keeps every parent at its children's exact midpoint. */
+  .round-body{flex:1 1 auto;min-height:1260px;display:flex;flex-direction:column;
+    justify-content:space-around}
 
   .match{position:relative;display:flex;flex-direction:column;gap:3px;
     width:var(--cellw)}
@@ -179,6 +185,9 @@ function render(){
     title.className = "round-title";
     title.textContent = ROUND_NAMES[r] || ("Round "+r);
     col.appendChild(title);
+    const body = document.createElement("div");
+    body.className = "round-body";
+    col.appendChild(body);
 
     const nodes = Object.values(NODES).filter(n=>n.round===r)
       .sort((a,b)=>nodeIndex(a)-nodeIndex(b));
@@ -192,7 +201,7 @@ function render(){
         (showPP?`<div class="pp">${matchLine(a,b)}</div>`:``) +
         slotHTML(node, a, b, w===a, userPick[node.id]===a) +
         slotHTML(node, b, a, w===b, userPick[node.id]===b);
-      col.appendChild(m);
+      body.appendChild(m);
     });
     bracketEl.appendChild(col);
   }
@@ -221,20 +230,24 @@ function renderChampion(){
   const col = document.createElement("div");
   col.id = "champ-col";
   col.className = "round";
-  col.style.justifyContent = "center";
+  const title = document.createElement("div");
+  title.className = "round-title";
+  title.textContent = "Winner";
+  col.appendChild(title);
+  const body = document.createElement("div");
+  body.className = "round-body";
+  body.style.justifyContent = "center";   // champion centred against the final
   const box = document.createElement("div");
   box.className = "champ";
   if(champ){
     box.innerHTML = `<div class="lab">Predicted champion</div>
       <div class="nm">${TEAM[champ].flag} ${TEAM[champ].name}</div>
-      <div class="od">path win chance shown left →</div>`;
+      <div class="od">← path win chance shown at left</div>`;
   } else {
     box.innerHTML = `<div class="lab">Champion</div><div class="nm">TBD</div>`;
   }
-  col.appendChild(document.createElement("div")); // spacer for title row
-  col.firstChild.className = "round-title";
-  col.firstChild.textContent = "Winner";
-  col.appendChild(box);
+  body.appendChild(box);
+  col.appendChild(body);
   bracketEl.appendChild(col);
 }
 
