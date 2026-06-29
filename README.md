@@ -33,13 +33,39 @@ advancing through the 2026 World Cup knockout rounds.
 | `index.html` | The whole web page — self-contained CSS + JS, no framework |
 | `bracket_data.js` / `.json` | Generated data: teams, calibrated Elo, the 16 R32 matches |
 | `build_bracket.py` | Regenerates the data from `odds_market.json` |
-| `odds_market.json` | Input: de-margined consensus odds (TheOddsAPI, 23 books) |
+| `odds_market.json` | Input: de-margined consensus odds (TheOddsAPI) |
+| `results.json` | Played-match results — `{"Home\|Away": {"winner","score"}}` |
+| `simulate_bracket.py` | 500k Monte Carlo championship campaign (+ exact check) |
+| `refresh.py` | Pulls fresh odds (h2h) + scores, updates the two JSON inputs |
+| `update.sh` | refresh → rebuild → commit/push if anything changed (cron entry) |
 | `CNAME` | GitHub Pages custom domain |
+
+## Played matches
+
+`results.json` pins completed games: the winner advances with certainty (the
+bracket cell shows the score + `FT`, the loser is greyed, and the title odds
+treat that team as eliminated). Edit it by hand, or let `refresh.py` fill it
+from the live scores feed. Only Round-of-32 fixtures are pinned today — later
+rounds stay Elo-modelled.
+
+## Keeping it fresh
+
+`update.sh` runs `refresh.py` then `build_bracket.py` and pushes only when the
+data moved. `refresh.py` makes two cheap Odds-API calls (~2 free-tier credits)
+and skips the odds call once every fixture is decided. A cron entry every 3 h
+(≈16 credits/day) stays comfortably inside the 500-credit monthly free tier:
+
+```cron
+0 */3 * * * /path/to/wc2026-bracket/update.sh >> update.log 2>&1
+```
+
+It needs a local (gitignored) `.env` with `ODDS_API_KEY=...`.
 
 ## Regenerate / run
 
 ```bash
 python3 build_bracket.py          # rebuild bracket_data.{js,json}
+python3 simulate_bracket.py       # print championship odds
 python3 -m http.server 8000       # then open http://localhost:8000/
 ```
 

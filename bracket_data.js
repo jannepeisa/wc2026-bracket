@@ -22,121 +22,121 @@ window.BRACKET_DATA = {
    "name": "Netherlands",
    "short": "Netherlands",
    "flag": "🇳🇱",
-   "elo": 1950.4
+   "elo": 1951.1
   },
   "Morocco": {
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1899.6
+   "elo": 1898.9
   },
   "Germany": {
    "name": "Germany",
    "short": "Germany",
    "flag": "🇩🇪",
-   "elo": 1968.0
+   "elo": 1968.2
   },
   "Paraguay": {
    "name": "Paraguay",
    "short": "Paraguay",
    "flag": "🇵🇾",
-   "elo": 1727.0
+   "elo": 1726.8
   },
   "France": {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2058.2
+   "elo": 2058.7
   },
   "Sweden": {
    "name": "Sweden",
    "short": "Sweden",
    "flag": "🇸🇪",
-   "elo": 1776.8
+   "elo": 1776.3
   },
   "Belgium": {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1901.1
+   "elo": 1901.7
   },
   "Senegal": {
    "name": "Senegal",
    "short": "Senegal",
    "flag": "🇸🇳",
-   "elo": 1845.9
+   "elo": 1845.3
   },
   "USA": {
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1900.0
+   "elo": 1900.1
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
    "short": "Bosnia",
    "flag": "🇧🇦",
-   "elo": 1662.0
+   "elo": 1661.9
   },
   "Spain": {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2056.2
+   "elo": 2056.9
   },
   "Austria": {
    "name": "Austria",
    "short": "Austria",
    "flag": "🇦🇹",
-   "elo": 1788.8
+   "elo": 1788.1
   },
   "Portugal": {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 2009.0
+   "elo": 2009.1
   },
   "Croatia": {
    "name": "Croatia",
    "short": "Croatia",
    "flag": "🇭🇷",
-   "elo": 1886.0
+   "elo": 1885.9
   },
   "Brazil": {
    "name": "Brazil",
    "short": "Brazil",
    "flag": "🇧🇷",
-   "elo": 2000.8
+   "elo": 1998.7
   },
   "Japan": {
    "name": "Japan",
    "short": "Japan",
    "flag": "🇯🇵",
-   "elo": 1864.2
+   "elo": 1866.3
   },
   "Ivory Coast": {
    "name": "Ivory Coast",
    "short": "Ivory Coast",
    "flag": "🇨🇮",
-   "elo": 1744.8
+   "elo": 1743.9
   },
   "Norway": {
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1820.2
+   "elo": 1821.1
   },
   "Mexico": {
    "name": "Mexico",
    "short": "Mexico",
    "flag": "🇲🇽",
-   "elo": 1846.4
+   "elo": 1846.6
   },
   "Ecuador": {
    "name": "Ecuador",
    "short": "Ecuador",
    "flag": "🇪🇨",
-   "elo": 1778.6
+   "elo": 1778.4
   },
   "England": {
    "name": "England",
@@ -154,25 +154,25 @@ window.BRACKET_DATA = {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1822.9
+   "elo": 1823.4
   },
   "Algeria": {
    "name": "Algeria",
    "short": "Algeria",
    "flag": "🇩🇿",
-   "elo": 1740.1
+   "elo": 1739.6
   },
   "Colombia": {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1892.3
+   "elo": 1892.6
   },
   "Ghana": {
    "name": "Ghana",
    "short": "Ghana",
    "flag": "🇬🇭",
-   "elo": 1702.7
+   "elo": 1702.4
   },
   "Australia": {
    "name": "Australia",
@@ -190,13 +190,13 @@ window.BRACKET_DATA = {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2051.5
+   "elo": 2051.0
   },
   "Cape Verde": {
    "name": "Cape Verde",
    "short": "Cape Verde",
    "flag": "🇨🇻",
-   "elo": 1688.5
+   "elo": 1689.0
   }
  },
  "r32": [
@@ -214,7 +214,7 @@ window.BRACKET_DATA = {
    "home": "Netherlands",
    "away": "Morocco",
    "date": "2026-06-30",
-   "p_home_adv": 0.5725,
+   "p_home_adv": 0.5747,
    "decided": null,
    "score": null
   },
@@ -223,7 +223,7 @@ window.BRACKET_DATA = {
    "home": "Germany",
    "away": "Paraguay",
    "date": "2026-06-29",
-   "p_home_adv": 0.8002,
+   "p_home_adv": 0.8005,
    "decided": null,
    "score": null
   },
@@ -232,7 +232,7 @@ window.BRACKET_DATA = {
    "home": "France",
    "away": "Sweden",
    "date": "2026-06-30",
-   "p_home_adv": 0.8348,
+   "p_home_adv": 0.8355,
    "decided": null,
    "score": null
   },
@@ -241,7 +241,7 @@ window.BRACKET_DATA = {
    "home": "Belgium",
    "away": "Senegal",
    "date": "2026-07-01",
-   "p_home_adv": 0.5789,
+   "p_home_adv": 0.5804,
    "decided": null,
    "score": null
   },
@@ -250,7 +250,7 @@ window.BRACKET_DATA = {
    "home": "USA",
    "away": "Bosnia & Herzegovina",
    "date": "2026-07-02",
-   "p_home_adv": 0.7973,
+   "p_home_adv": 0.7976,
    "decided": null,
    "score": null
   },
@@ -259,7 +259,7 @@ window.BRACKET_DATA = {
    "home": "Spain",
    "away": "Austria",
    "date": "2026-07-02",
-   "p_home_adv": 0.8234,
+   "p_home_adv": 0.8246,
    "decided": null,
    "score": null
   },
@@ -268,7 +268,7 @@ window.BRACKET_DATA = {
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.67,
+   "p_home_adv": 0.6702,
    "decided": null,
    "score": null
   },
@@ -277,7 +277,7 @@ window.BRACKET_DATA = {
    "home": "Brazil",
    "away": "Japan",
    "date": "2026-06-29",
-   "p_home_adv": 0.6869,
+   "p_home_adv": 0.6818,
    "decided": null,
    "score": null
   },
@@ -286,7 +286,7 @@ window.BRACKET_DATA = {
    "home": "Ivory Coast",
    "away": "Norway",
    "date": "2026-06-30",
-   "p_home_adv": 0.3931,
+   "p_home_adv": 0.3908,
    "decided": null,
    "score": null
   },
@@ -295,7 +295,7 @@ window.BRACKET_DATA = {
    "home": "Mexico",
    "away": "Ecuador",
    "date": "2026-07-01",
-   "p_home_adv": 0.5963,
+   "p_home_adv": 0.5968,
    "decided": null,
    "score": null
   },
@@ -313,7 +313,7 @@ window.BRACKET_DATA = {
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.617,
+   "p_home_adv": 0.6183,
    "decided": null,
    "score": null
   },
@@ -322,7 +322,7 @@ window.BRACKET_DATA = {
    "home": "Colombia",
    "away": "Ghana",
    "date": "2026-07-04",
-   "p_home_adv": 0.7487,
+   "p_home_adv": 0.7493,
    "decided": null,
    "score": null
   },
@@ -340,7 +340,7 @@ window.BRACKET_DATA = {
    "home": "Argentina",
    "away": "Cape Verde",
    "date": "2026-07-03",
-   "p_home_adv": 0.8899,
+   "p_home_adv": 0.8893,
    "decided": null,
    "score": null
   }
