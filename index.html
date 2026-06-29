@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Cup 2026 — Knockout Bracket Predictor</title>
+<style>
+  :root{
+    --bg:#0c1424; --panel:#121d33; --panel2:#172747; --line:#26384f;
+    --ink:#eaf1fb; --muted:#8aa0bd; --accent:#34d399; --accent2:#f59e0b;
+    --pick:#3b82f6; --win:#22c55e; --lose:#42526b;
+    --cellw:188px; --cellh:62px; --rowgap:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#16243f,var(--bg));
+    color:var(--ink);font:14px/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{padding:20px 22px 8px;text-align:center}
+  h1{margin:0 0 4px;font-size:20px;letter-spacing:.2px}
+  .sub{color:var(--muted);font-size:12.5px;max-width:760px;margin:0 auto}
+  .legend{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+    margin:12px auto 4px;color:var(--muted);font-size:12px}
+  .legend b{color:var(--ink);font-weight:600}
+  .chip{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .toolbar{display:flex;gap:10px;justify-content:center;align-items:center;
+    margin:8px auto 4px;flex-wrap:wrap}
+  button.tool{background:var(--panel2);color:var(--ink);border:1px solid var(--line);
+    padding:7px 12px;border-radius:8px;cursor:pointer;font-size:12.5px}
+  button.tool:hover{border-color:var(--pick)}
+
+  .scroll{overflow-x:auto;padding:14px 20px 40px}
+  .bracket{display:flex;gap:30px;min-width:min-content;margin:0 auto;width:max-content}
+  .round{display:flex;flex-direction:column;justify-content:space-around;gap:var(--rowgap)}
+  .round-title{position:sticky;top:0;text-align:center;color:var(--muted);
+    font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:2px}
+
+  .match{position:relative;display:flex;flex-direction:column;gap:3px;
+    width:var(--cellw)}
+  .match .pp{position:absolute;top:-15px;left:0;right:0;text-align:center;
+    font-size:10.5px;color:var(--muted)}
+  .slot{position:relative;display:flex;align-items:center;gap:8px;height:30px;
+    padding:0 10px;background:var(--panel);border:1px solid var(--line);
+    border-radius:7px;cursor:pointer;overflow:hidden;transition:border-color .12s}
+  .slot:hover{border-color:var(--pick)}
+  .slot .fill{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,
+    rgba(59,130,246,.30),rgba(59,130,246,.10));z-index:0;transition:width .35s ease}
+  .slot.adv .fill{background:linear-gradient(90deg,rgba(34,197,94,.34),rgba(34,197,94,.10))}
+  .slot.tbd{cursor:default;color:var(--muted);font-style:italic}
+  .slot.tbd:hover{border-color:var(--line)}
+  .slot .flag{position:relative;z-index:1;font-size:15px;width:18px;text-align:center}
+  .slot .nm{position:relative;z-index:1;flex:1;white-space:nowrap;overflow:hidden;
+    text-overflow:ellipsis;font-weight:550}
+  .slot .pct{position:relative;z-index:1;font-variant-numeric:tabular-nums;
+    color:var(--muted);font-size:12px;min-width:34px;text-align:right}
+  .slot.adv .pct{color:#bdf3cf}
+  .slot.adv .nm{color:#eafff0}
+  .slot.picked{box-shadow:0 0 0 1.5px var(--pick) inset;border-color:var(--pick)}
+  .slot.picked .nm:after{content:" 📌";font-size:11px}
+  .champ{align-self:center;margin-top:6px;padding:8px 14px;border-radius:10px;
+    background:linear-gradient(180deg,#1d2c4d,#152b4d);border:1px solid var(--line);
+    text-align:center}
+  .champ .lab{font-size:10.5px;letter-spacing:1.5px;color:var(--accent2);text-transform:uppercase}
+  .champ .nm{font-size:16px;font-weight:700;margin-top:2px}
+  .champ .od{font-size:11.5px;color:var(--muted)}
+  footer{color:var(--muted);font-size:11.5px;text-align:center;padding:0 20px 26px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏆 World Cup 2026 — Knockout Bracket Predictor</h1>
+  <p class="sub" id="subnote"></p>
+  <div class="legend">
+    <span class="chip"><span class="dot" style="background:#22c55e"></span><b>Advancing</b> (more likely)</span>
+    <span class="chip"><span class="dot" style="background:#3b82f6"></span><b>Your pick</b> (click any team)</span>
+    <span class="chip">Bar width &amp; % = win probability for that match</span>
+  </div>
+  <div class="toolbar">
+    <button class="tool" id="reset">↺ Reset to most-likely</button>
+  </div>
+</header>
+
+<div class="scroll">
+  <div class="bracket" id="bracket"></div>
+</div>
+
+<footer id="foot"></footer>
+
+<script src="bracket_data.js"></script>
+<script>
+const D = window.BRACKET_DATA;
+const TEAM = D.teams;
+const SCALE = D.meta.elo_scale || 400;
+
+// ---- model ---------------------------------------------------------------
+// p(A beats B) via calibrated Elo. R32 cells reproduce the betting market.
+function pWin(a, b){
+  const ra = TEAM[a].elo, rb = TEAM[b].elo;
+  return 1 / (1 + Math.pow(10, -(ra - rb) / SCALE));
+}
+
+// ---- bracket structure ---------------------------------------------------
+// 16 R32 matches -> 8 R16 -> 4 QF -> 2 SF -> 1 Final, paired sequentially.
+const ROUND_NAMES = ["Round of 32","Round of 16","Quarter-finals","Semi-finals","Final"];
+
+// Build node tree. Leaf nodes are R32 matches with fixed teams.
+let NODES = {};   // id -> {id, round, home, away, childA, childB}
+function buildTree(){
+  NODES = {};
+  // round 0 leaves
+  let prev = [];
+  D.r32.forEach((m, i) => {
+    const id = "R0-"+i;
+    NODES[id] = {id, round:0, fixed:true, home:m.home, away:m.away, date:m.date};
+    prev.push(id);
+  });
+  let round = 1;
+  while(prev.length > 1){
+    const next = [];
+    for(let i=0;i<prev.length;i+=2){
+      const id = "R"+round+"-"+(i/2);
+      NODES[id] = {id, round, fixed:false, childA:prev[i], childB:prev[i+1]};
+      next.push(id);
+    }
+    prev = next; round++;
+  }
+  return prev[0]; // final node id
+}
+const FINAL_ID = buildTree();
+const NROUNDS = Math.max(...Object.values(NODES).map(n=>n.round)) + 1;
+
+// ---- selection state -----------------------------------------------------
+// pick[nodeId] = chosen team name to advance from that match.
+// Default (auto): higher pWin team. User clicks override.
+let userPick = {};   // explicit user choices
+
+function teamsOf(node){
+  if(node.fixed) return [node.home, node.away];
+  return [winnerOf(NODES[node.childA]), winnerOf(NODES[node.childB])];
+}
+function winnerOf(node){
+  const [a,b] = teamsOf(node);
+  if(!a || !b) return null;
+  if(userPick[node.id] && (userPick[node.id]===a || userPick[node.id]===b))
+    return userPick[node.id];
+  return pWin(a,b) >= 0.5 ? a : b;   // auto = favourite
+}
+
+// ---- rendering -----------------------------------------------------------
+const bracketEl = document.getElementById("bracket");
+
+function slotHTML(node, team, other, isAdv, isPicked){
+  if(!team){
+    return `<div class="slot tbd"><span class="flag">·</span>
+      <span class="nm">winner ${tbdLabel(node)}</span></div>`;
+  }
+  const p = pWin(team, other);
+  const t = TEAM[team];
+  return `<div class="slot ${isAdv?'adv':''} ${isPicked?'picked':''}"
+       data-node="${node.id}" data-team="${team}">
+     <span class="fill" style="width:${(p*100).toFixed(1)}%"></span>
+     <span class="flag">${t.flag||''}</span>
+     <span class="nm">${t.short}</span>
+     <span class="pct">${Math.round(p*100)}%</span>
+   </div>`;
+}
+function tbdLabel(node){
+  // which feeder match is this side
+  return "TBD";
+}
+
+function render(){
+  bracketEl.innerHTML = "";
+  // group nodes by round
+  for(let r=0; r<NROUNDS; r++){
+    const col = document.createElement("div");
+    col.className = "round";
+    const title = document.createElement("div");
+    title.className = "round-title";
+    title.textContent = ROUND_NAMES[r] || ("Round "+r);
+    col.appendChild(title);
+
+    const nodes = Object.values(NODES).filter(n=>n.round===r)
+      .sort((a,b)=>nodeIndex(a)-nodeIndex(b));
+    nodes.forEach(node=>{
+      const [a,b] = teamsOf(node);
+      const w = winnerOf(node);
+      const m = document.createElement("div");
+      m.className = "match";
+      const showPP = a && b;
+      m.innerHTML =
+        (showPP?`<div class="pp">${matchLine(a,b)}</div>`:``) +
+        slotHTML(node, a, b, w===a, userPick[node.id]===a) +
+        slotHTML(node, b, a, w===b, userPick[node.id]===b);
+      col.appendChild(m);
+    });
+    bracketEl.appendChild(col);
+  }
+  renderChampion();
+  // attach handlers
+  bracketEl.querySelectorAll(".slot[data-team]").forEach(el=>{
+    el.addEventListener("click", ()=>onPick(el.dataset.node, el.dataset.team));
+  });
+}
+
+function matchLine(a,b){
+  const p = pWin(a,b);
+  return `${Math.round(p*100)}–${Math.round((1-p)*100)}`;
+}
+
+function nodeIndex(node){
+  // stable vertical ordering: leaves by index, parents by child position
+  if(node.fixed) return parseInt(node.id.split("-")[1]);
+  return (nodeIndex(NODES[node.childA]) + nodeIndex(NODES[node.childB]))/2;
+}
+
+function renderChampion(){
+  const champ = winnerOf(NODES[FINAL_ID]);
+  let el = document.getElementById("champ-col");
+  if(el) el.remove();
+  const col = document.createElement("div");
+  col.id = "champ-col";
+  col.className = "round";
+  col.style.justifyContent = "center";
+  const box = document.createElement("div");
+  box.className = "champ";
+  if(champ){
+    box.innerHTML = `<div class="lab">Predicted champion</div>
+      <div class="nm">${TEAM[champ].flag} ${TEAM[champ].name}</div>
+      <div class="od">path win chance shown left →</div>`;
+  } else {
+    box.innerHTML = `<div class="lab">Champion</div><div class="nm">TBD</div>`;
+  }
+  col.appendChild(document.createElement("div")); // spacer for title row
+  col.firstChild.className = "round-title";
+  col.firstChild.textContent = "Winner";
+  col.appendChild(box);
+  bracketEl.appendChild(col);
+}
+
+// ---- interaction ---------------------------------------------------------
+function onPick(nodeId, team){
+  const node = NODES[nodeId];
+  const [a,b] = teamsOf(node);
+  // toggle: clicking current pick/favourite clears override
+  if(userPick[nodeId] === team){
+    delete userPick[nodeId];
+  } else {
+    userPick[nodeId] = team;
+  }
+  // picking a team here invalidates downstream picks that named the team that
+  // just got eliminated — prune any user pick no longer reachable.
+  prunePicks();
+  render();
+}
+
+function prunePicks(){
+  let changed = true;
+  while(changed){
+    changed = false;
+    for(const id of Object.keys(userPick)){
+      const node = NODES[id];
+      const [a,b] = teamsOf(node);
+      const t = userPick[id];
+      if(t !== a && t !== b){ delete userPick[id]; changed = true; }
+    }
+  }
+}
+
+document.getElementById("reset").onclick = ()=>{ userPick={}; render(); };
+
+// ---- boot ----------------------------------------------------------------
+document.getElementById("subnote").textContent = D.meta.note;
+document.getElementById("foot").innerHTML =
+  `Source: ${D.meta.source}. Click any team to send them through and watch the rest of the bracket recompute. `+
+  `Round-of-32 numbers match the market; later rounds are model estimates.`;
+render();
+</script>
+</body>
+</html>
