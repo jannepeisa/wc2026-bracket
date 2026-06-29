@@ -1,0 +1,5 @@
+# never commit secrets or local cruft
+.env
+__pycache__/
+*.pyc
+*.backup.json

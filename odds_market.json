@@ -1,0 +1,774 @@
+{
+ "matches": [
+  {
+   "home": "Brazil",
+   "away": "Japan",
+   "date": "2026-06-29",
+   "kickoff_utc": "2026-06-29T17:00:00Z",
+   "odds_1x2": [
+    1.7260869565217392,
+    3.723913043478261,
+    5.237826086956522
+   ],
+   "fair_1x2": [
+    0.5577,
+    0.2585,
+    0.1838
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.4591,
+   "ou_all": {
+    "2.25": {
+     "fair_over": 0.5242966751918159,
+     "n_books": 1,
+     "avg_over_price": 1.86,
+     "avg_under_price": 2.05
+    },
+    "2.5": {
+     "fair_over": 0.4591057797164667,
+     "n_books": 12,
+     "avg_over_price": 2.066666666666667,
+     "avg_under_price": 1.7541666666666667
+    },
+    "3.0": {
+     "fair_over": 0.31151241534988716,
+     "n_books": 1,
+     "avg_over_price": 3.05,
+     "avg_under_price": 1.38
+    }
+   },
+   "match_total_pmf": {
+    "3+": 0.4591057797164667
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Germany",
+   "away": "Paraguay",
+   "date": "2026-06-29",
+   "kickoff_utc": "2026-06-29T20:30:00Z",
+   "odds_1x2": [
+    1.3604347826086955,
+    5.081304347826087,
+    9.115217391304348
+   ],
+   "fair_1x2": [
+    0.7057,
+    0.1889,
+    0.1053
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.5463,
+   "ou_all": {
+    "2.0": {
+     "fair_over": 0.7173447537473233,
+     "n_books": 1,
+     "avg_over_price": 1.32,
+     "avg_under_price": 3.35
+    },
+    "2.5": {
+     "fair_over": 0.5463265751035535,
+     "n_books": 12,
+     "avg_over_price": 1.7341666666666666,
+     "avg_under_price": 2.0883333333333334
+    },
+    "2.75": {
+     "fair_over": 0.49487179487179483,
+     "n_books": 1,
+     "avg_over_price": 1.97,
+     "avg_under_price": 1.93
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.2826552462526767,
+    "1": 0.17101817864376978,
+    "3+": 0.5463265751035535
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Netherlands",
+   "away": "Morocco",
+   "date": "2026-06-30",
+   "kickoff_utc": "2026-06-30T01:00:00Z",
+   "odds_1x2": [
+    2.2922727272727275,
+    3.1295454545454544,
+    3.5040909090909094
+   ],
+   "fair_1x2": [
+    0.419,
+    0.3069,
+    0.2741
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.4337,
+   "ou_all": {
+    "2.25": {
+     "fair_over": 0.49487179487179483,
+     "n_books": 1,
+     "avg_over_price": 1.97,
+     "avg_under_price": 1.93
+    },
+    "2.5": {
+     "fair_over": 0.43373211353506913,
+     "n_books": 11,
+     "avg_over_price": 2.194545454545455,
+     "avg_under_price": 1.6809090909090907
+    },
+    "3.0": {
+     "fair_over": 0.30155210643015523,
+     "n_books": 1,
+     "avg_over_price": 3.15,
+     "avg_under_price": 1.36
+    }
+   },
+   "match_total_pmf": {
+    "3+": 0.43373211353506913
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 22 books averaged",
+   "n_h2h_books": 22
+  },
+  {
+   "home": "Ivory Coast",
+   "away": "Norway",
+   "date": "2026-06-30",
+   "kickoff_utc": "2026-06-30T17:00:00Z",
+   "odds_1x2": [
+    3.680434782608696,
+    3.5791304347826083,
+    2.0178260869565214
+   ],
+   "fair_1x2": [
+    0.2596,
+    0.2669,
+    0.4735
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.5352,
+   "ou_all": {
+    "2.5": {
+     "fair_over": 0.535245183887916,
+     "n_books": 12,
+     "avg_over_price": 1.7691666666666668,
+     "avg_under_price": 2.0375
+    },
+    "2.75": {
+     "fair_over": 0.4858611825192801,
+     "n_books": 1,
+     "avg_over_price": 2.0,
+     "avg_under_price": 1.89
+    },
+    "3.0": {
+     "fair_over": 0.3984962406015038,
+     "n_books": 1,
+     "avg_over_price": 2.4,
+     "avg_under_price": 1.59
+    }
+   },
+   "match_total_pmf": {
+    "3+": 0.535245183887916
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "France",
+   "away": "Sweden",
+   "date": "2026-06-30",
+   "kickoff_utc": "2026-06-30T21:00:00Z",
+   "odds_1x2": [
+    1.2678260869565217,
+    6.160434782608696,
+    10.99304347826087
+   ],
+   "fair_1x2": [
+    0.7569,
+    0.1558,
+    0.0873
+   ],
+   "ou_best_line": 3.5,
+   "ou_best_fair_over": 0.4325,
+   "ou_all": {
+    "2.5": {
+     "fair_over": 0.645996387718242,
+     "n_books": 4,
+     "avg_over_price": 1.47,
+     "avg_under_price": 2.6825
+    },
+    "3.0": {
+     "fair_over": 0.5395308427454387,
+     "n_books": 3,
+     "avg_over_price": 1.7666666666666666,
+     "avg_under_price": 2.07
+    },
+    "3.25": {
+     "fair_over": 0.4769230769230769,
+     "n_books": 1,
+     "avg_over_price": 2.04,
+     "avg_under_price": 1.86
+    },
+    "3.5": {
+     "fair_over": 0.43253796095444685,
+     "n_books": 6,
+     "avg_over_price": 2.18,
+     "avg_under_price": 1.6616666666666664
+    }
+   },
+   "match_total_pmf": {
+    "2": 0.21345842676379512,
+    "3+": 0.43253796095444685
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Mexico",
+   "away": "Ecuador",
+   "date": "2026-07-01",
+   "kickoff_utc": "2026-07-01T01:00:00Z",
+   "odds_1x2": [
+    2.205217391304348,
+    2.9482608695652175,
+    3.965652173913043
+   ],
+   "fair_1x2": [
+    0.434,
+    0.3246,
+    0.2413
+   ],
+   "ou_best_line": 1.5,
+   "ou_best_fair_over": 0.5885,
+   "ou_all": {
+    "1.5": {
+     "fair_over": 0.5885126446635234,
+     "n_books": 6,
+     "avg_over_price": 1.5999999999999999,
+     "avg_under_price": 2.2883333333333336
+    },
+    "1.75": {
+     "fair_over": 0.5256410256410255,
+     "n_books": 1,
+     "avg_over_price": 1.85,
+     "avg_under_price": 2.05
+    },
+    "2.0": {
+     "fair_over": 0.4435831180017226,
+     "n_books": 3,
+     "avg_over_price": 2.1533333333333333,
+     "avg_under_price": 1.7166666666666668
+    },
+    "2.5": {
+     "fair_over": 0.3335287221570926,
+     "n_books": 4,
+     "avg_over_price": 2.8425000000000002,
+     "avg_under_price": 1.4224999999999999
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.4114873553364766,
+    "1": 0.25498392250643076,
+    "3+": 0.3335287221570926
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "England",
+   "away": "DR Congo",
+   "date": "2026-07-01",
+   "kickoff_utc": "2026-07-01T16:00:00Z",
+   "odds_1x2": [
+    1.2676190476190476,
+    5.609047619047619,
+    13.04
+   ],
+   "fair_1x2": [
+    0.7557,
+    0.1708,
+    0.0735
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.5048,
+   "ou_all": {
+    "2.5": {
+     "fair_over": 0.504803073967339,
+     "n_books": 11,
+     "avg_over_price": 1.8745454545454547,
+     "avg_under_price": 1.910909090909091
+    },
+    "3.0": {
+     "fair_over": 0.3629807692307692,
+     "n_books": 1,
+     "avg_over_price": 2.65,
+     "avg_under_price": 1.51
+    }
+   },
+   "match_total_pmf": {
+    "3+": 0.504803073967339
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 21 books averaged",
+   "n_h2h_books": 21
+  },
+  {
+   "home": "Belgium",
+   "away": "Senegal",
+   "date": "2026-07-01",
+   "kickoff_utc": "2026-07-01T20:00:00Z",
+   "odds_1x2": [
+    2.2082608695652173,
+    3.2617391304347825,
+    3.4756521739130433
+   ],
+   "fair_1x2": [
+    0.4325,
+    0.2928,
+    0.2748
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.438,
+   "ou_all": {
+    "1.5": {
+     "fair_over": 0.6935123042505593,
+     "n_books": 1,
+     "avg_over_price": 1.37,
+     "avg_under_price": 3.1
+    },
+    "2.0": {
+     "fair_over": 0.6,
+     "n_books": 1,
+     "avg_over_price": 1.62,
+     "avg_under_price": 2.43
+    },
+    "2.25": {
+     "fair_over": 0.4961439588688946,
+     "n_books": 1,
+     "avg_over_price": 1.96,
+     "avg_under_price": 1.93
+    },
+    "2.5": {
+     "fair_over": 0.43803418803418803,
+     "n_books": 11,
+     "avg_over_price": 2.151818181818182,
+     "avg_under_price": 1.6772727272727272
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.3064876957494407,
+    "1": 0.2554781162163713,
+    "3+": 0.43803418803418803
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "USA",
+   "away": "Bosnia & Herzegovina",
+   "date": "2026-07-02",
+   "kickoff_utc": "2026-07-02T00:00:00Z",
+   "odds_1x2": [
+    1.363913043478261,
+    4.9769565217391305,
+    8.964782608695652
+   ],
+   "fair_1x2": [
+    0.7012,
+    0.1922,
+    0.1067
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.5253,
+   "ou_all": {
+    "2.0": {
+     "fair_over": 0.6869369369369369,
+     "n_books": 1,
+     "avg_over_price": 1.39,
+     "avg_under_price": 3.05
+    },
+    "2.5": {
+     "fair_over": 0.5252934034803722,
+     "n_books": 13,
+     "avg_over_price": 1.8046153846153847,
+     "avg_under_price": 1.996923076923077
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.3130630630630631,
+    "1": 0.16164353345656468,
+    "3+": 0.5252934034803722
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Spain",
+   "away": "Austria",
+   "date": "2026-07-02",
+   "kickoff_utc": "2026-07-02T19:00:00Z",
+   "odds_1x2": [
+    1.2991304347826087,
+    5.2986956521739135,
+    10.993913043478262
+   ],
+   "fair_1x2": [
+    0.7335,
+    0.1798,
+    0.0867
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.5185,
+   "ou_all": {
+    "2.0": {
+     "fair_over": 0.6787330316742082,
+     "n_books": 1,
+     "avg_over_price": 1.42,
+     "avg_under_price": 3.0
+    },
+    "2.5": {
+     "fair_over": 0.5185335223820133,
+     "n_books": 13,
+     "avg_over_price": 1.8284615384615384,
+     "avg_under_price": 1.9692307692307691
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.3212669683257918,
+    "1": 0.16019950929219484,
+    "3+": 0.5185335223820133
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Portugal",
+   "away": "Croatia",
+   "date": "2026-07-02",
+   "kickoff_utc": "2026-07-02T23:00:00Z",
+   "odds_1x2": [
+    1.7821739130434784,
+    3.572173913043478,
+    4.8673913043478265
+   ],
+   "fair_1x2": [
+    0.5362,
+    0.2675,
+    0.1963
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.4551,
+   "ou_all": {
+    "2.0": {
+     "fair_over": 0.6044226044226043,
+     "n_books": 1,
+     "avg_over_price": 1.61,
+     "avg_under_price": 2.46
+    },
+    "2.25": {
+     "fair_over": 0.5307692307692307,
+     "n_books": 1,
+     "avg_over_price": 1.83,
+     "avg_under_price": 2.07
+    },
+    "2.5": {
+     "fair_over": 0.4550669216061185,
+     "n_books": 11,
+     "avg_over_price": 2.0727272727272728,
+     "avg_under_price": 1.7309090909090907
+    },
+    "3.0": {
+     "fair_over": 0.3181818181818181,
+     "n_books": 1,
+     "avg_over_price": 3.0,
+     "avg_under_price": 1.4
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.3955773955773957,
+    "1": 0.1493556828164858,
+    "3+": 0.4550669216061185
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Switzerland",
+   "away": "Algeria",
+   "date": "2026-07-03",
+   "kickoff_utc": "2026-07-03T03:00:00Z",
+   "odds_1x2": [
+    2.0169565217391305,
+    3.327826086956522,
+    3.988695652173913
+   ],
+   "fair_1x2": [
+    0.4735,
+    0.287,
+    0.2395
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.449,
+   "ou_all": {
+    "2.25": {
+     "fair_over": 0.5089974293059126,
+     "n_books": 1,
+     "avg_over_price": 1.91,
+     "avg_under_price": 1.98
+    },
+    "2.5": {
+     "fair_over": 0.4489528795811519,
+     "n_books": 12,
+     "avg_over_price": 2.105,
+     "avg_under_price": 1.7149999999999999
+    },
+    "3.0": {
+     "fair_over": 0.3181818181818181,
+     "n_books": 1,
+     "avg_over_price": 3.0,
+     "avg_under_price": 1.4
+    }
+   },
+   "match_total_pmf": {
+    "3+": 0.4489528795811519
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Australia",
+   "away": "Egypt",
+   "date": "2026-07-03",
+   "kickoff_utc": "2026-07-03T18:00:00Z",
+   "odds_1x2": [
+    3.3356521739130436,
+    2.9243478260869566,
+    2.466521739130435
+   ],
+   "fair_1x2": [
+    0.2863,
+    0.3266,
+    0.3872
+   ],
+   "ou_best_line": 1.5,
+   "ou_best_fair_over": 0.6042,
+   "ou_all": {
+    "1.5": {
+     "fair_over": 0.6042462845010615,
+     "n_books": 6,
+     "avg_over_price": 1.5533333333333335,
+     "avg_under_price": 2.3716666666666666
+    },
+    "1.75": {
+     "fair_over": 0.5421994884910486,
+     "n_books": 1,
+     "avg_over_price": 1.79,
+     "avg_under_price": 2.12
+    },
+    "2.0": {
+     "fair_over": 0.46260869565217383,
+     "n_books": 3,
+     "avg_over_price": 2.06,
+     "avg_under_price": 1.7733333333333334
+    },
+    "2.5": {
+     "fair_over": 0.34205829863176684,
+     "n_books": 4,
+     "avg_over_price": 2.7649999999999997,
+     "avg_under_price": 1.4375
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.39575371549893845,
+    "1": 0.2621879858692947,
+    "3+": 0.34205829863176684
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Argentina",
+   "away": "Cape Verde",
+   "date": "2026-07-03",
+   "kickoff_utc": "2026-07-03T22:00:00Z",
+   "odds_1x2": [
+    1.1526086956521737,
+    8.041304347826086,
+    18.93521739130435
+   ],
+   "fair_1x2": [
+    0.8304,
+    0.119,
+    0.0505
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.5815,
+   "ou_all": {
+    "2.5": {
+     "fair_over": 0.5815147625160462,
+     "n_books": 6,
+     "avg_over_price": 1.63,
+     "avg_under_price": 2.265
+    },
+    "2.75": {
+     "fair_over": 0.5256410256410255,
+     "n_books": 1,
+     "avg_over_price": 1.85,
+     "avg_under_price": 2.05
+    },
+    "3.0": {
+     "fair_over": 0.4592013888888889,
+     "n_books": 3,
+     "avg_over_price": 2.0766666666666667,
+     "avg_under_price": 1.7633333333333334
+    },
+    "3.5": {
+     "fair_over": 0.35493640218049666,
+     "n_books": 4,
+     "avg_over_price": 2.6625,
+     "avg_under_price": 1.4649999999999999
+    }
+   },
+   "match_total_pmf": {
+    "2": 0.2265783603355495,
+    "3+": 0.35493640218049666
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "Colombia",
+   "away": "Ghana",
+   "date": "2026-07-04",
+   "kickoff_utc": "2026-07-04T01:30:00Z",
+   "odds_1x2": [
+    1.5239130434782608,
+    3.949130434782609,
+    7.341739130434783
+   ],
+   "fair_1x2": [
+    0.6276,
+    0.2422,
+    0.1303
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.4256,
+   "ou_all": {
+    "1.5": {
+     "fair_over": 0.6869369369369369,
+     "n_books": 1,
+     "avg_over_price": 1.39,
+     "avg_under_price": 3.05
+    },
+    "2.0": {
+     "fair_over": 0.5693493150684932,
+     "n_books": 3,
+     "avg_over_price": 1.6766666666666665,
+     "avg_under_price": 2.216666666666667
+    },
+    "2.25": {
+     "fair_over": 0.48711340206185555,
+     "n_books": 1,
+     "avg_over_price": 1.99,
+     "avg_under_price": 1.89
+    },
+    "2.5": {
+     "fair_over": 0.42560553633217996,
+     "n_books": 9,
+     "avg_over_price": 2.2133333333333334,
+     "avg_under_price": 1.64
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.3130630630630631,
+    "1": 0.26133140060475696,
+    "3+": 0.42560553633217996
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  },
+  {
+   "home": "South Africa",
+   "away": "Canada",
+   "date": "2026-06-28",
+   "kickoff_utc": "2026-06-28T19:00:00Z",
+   "odds_1x2": [
+    5.546956521739131,
+    3.6343478260869566,
+    1.6991304347826086
+   ],
+   "fair_1x2": [
+    0.1727,
+    0.2636,
+    0.5637
+   ],
+   "ou_best_line": 2.5,
+   "ou_best_fair_over": 0.4414,
+   "ou_all": {
+    "1.5": {
+     "fair_over": 0.7,
+     "n_books": 1,
+     "avg_over_price": 1.35,
+     "avg_under_price": 3.15
+    },
+    "2.0": {
+     "fair_over": 0.585,
+     "n_books": 1,
+     "avg_over_price": 1.66,
+     "avg_under_price": 2.34
+    },
+    "2.25": {
+     "fair_over": 0.5167095115681234,
+     "n_books": 1,
+     "avg_over_price": 1.88,
+     "avg_under_price": 2.01
+    },
+    "2.5": {
+     "fair_over": 0.4414414414414415,
+     "n_books": 11,
+     "avg_over_price": 2.1418181818181816,
+     "avg_under_price": 1.6927272727272729
+    }
+   },
+   "match_total_pmf": {
+    "0": 0.30000000000000004,
+    "1": 0.25855855855855847,
+    "3+": 0.4414414414414415
+   },
+   "home_pmf": null,
+   "away_pmf": null,
+   "source": "TheOddsAPI / 23 books averaged",
+   "n_h2h_books": 23
+  }
+ ]
+}
