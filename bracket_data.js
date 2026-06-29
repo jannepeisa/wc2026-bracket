@@ -106,25 +106,25 @@ window.BRACKET_DATA = {
    "name": "Brazil",
    "short": "Brazil",
    "flag": "🇧🇷",
-   "elo": 1998.7
+   "elo": 1998.8
   },
   "Japan": {
    "name": "Japan",
    "short": "Japan",
    "flag": "🇯🇵",
-   "elo": 1866.3
+   "elo": 1866.2
   },
   "Ivory Coast": {
    "name": "Ivory Coast",
    "short": "Ivory Coast",
    "flag": "🇨🇮",
-   "elo": 1743.9
+   "elo": 1744.5
   },
   "Norway": {
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1821.1
+   "elo": 1820.5
   },
   "Mexico": {
    "name": "Mexico",
@@ -205,144 +205,118 @@ window.BRACKET_DATA = {
    "home": "South Africa",
    "away": "Canada",
    "date": "2026-06-28",
-   "p_home_adv": 0.3045,
-   "decided": "Canada",
-   "score": "0-1"
+   "p_home_adv": 0.3045
   },
   {
    "id": "R32-2",
    "home": "Netherlands",
    "away": "Morocco",
    "date": "2026-06-30",
-   "p_home_adv": 0.5747,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.5746
   },
   {
    "id": "R32-3",
    "home": "Germany",
    "away": "Paraguay",
    "date": "2026-06-29",
-   "p_home_adv": 0.8005,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.8005
   },
   {
    "id": "R32-4",
    "home": "France",
    "away": "Sweden",
    "date": "2026-06-30",
-   "p_home_adv": 0.8355,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.8355
   },
   {
    "id": "R32-5",
    "home": "Belgium",
    "away": "Senegal",
    "date": "2026-07-01",
-   "p_home_adv": 0.5804,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.5804
   },
   {
    "id": "R32-6",
    "home": "USA",
    "away": "Bosnia & Herzegovina",
    "date": "2026-07-02",
-   "p_home_adv": 0.7976,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.7976
   },
   {
    "id": "R32-7",
    "home": "Spain",
    "away": "Austria",
    "date": "2026-07-02",
-   "p_home_adv": 0.8246,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.8246
   },
   {
    "id": "R32-8",
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.6702,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.6702
   },
   {
    "id": "R32-9",
    "home": "Brazil",
    "away": "Japan",
    "date": "2026-06-29",
-   "p_home_adv": 0.6818,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.682
   },
   {
    "id": "R32-10",
    "home": "Ivory Coast",
    "away": "Norway",
    "date": "2026-06-30",
-   "p_home_adv": 0.3908,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.3924
   },
   {
    "id": "R32-11",
    "home": "Mexico",
    "away": "Ecuador",
    "date": "2026-07-01",
-   "p_home_adv": 0.5968,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.5968
   },
   {
    "id": "R32-12",
    "home": "England",
    "away": "DR Congo",
    "date": "2026-07-01",
-   "p_home_adv": 0.8411,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.8411
   },
   {
    "id": "R32-13",
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.6183,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.6183
   },
   {
    "id": "R32-14",
    "home": "Colombia",
    "away": "Ghana",
    "date": "2026-07-04",
-   "p_home_adv": 0.7493,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.7493
   },
   {
    "id": "R32-15",
    "home": "Australia",
    "away": "Egypt",
    "date": "2026-07-03",
-   "p_home_adv": 0.4496,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.4496
   },
   {
    "id": "R32-16",
    "home": "Argentina",
    "away": "Cape Verde",
    "date": "2026-07-03",
-   "p_home_adv": 0.8893,
-   "decided": null,
-   "score": null
+   "p_home_adv": 0.8893
   }
- ]
+ ],
+ "results": {
+  "South Africa|Canada": {
+   "winner": "Canada",
+   "score": "0-1"
+  }
+ }
 };

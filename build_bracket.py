@@ -122,18 +122,12 @@ def main():
                 "elo": round(rating, 1),
             }
 
-        res = results.get(f"{home}|{away}") or {}
-        decided = res.get("winner")
-        if decided and decided not in (home, away):
-            decided = None  # ignore a result that doesn't name one of these teams
         r32.append({
             "id": f"R32-{i+1}",
             "home": home,
             "away": away,
             "date": m.get("date"),
             "p_home_adv": round(p_home_adv, 4),  # market-exact, for reference
-            "decided": decided,                  # winner name once played, else None
-            "score": res.get("score"),           # e.g. "0-1" (home-away), optional
         })
 
     data = {
@@ -147,6 +141,10 @@ def main():
         },
         "teams": teams,
         "r32": r32,
+        # Played-match results, any round. Keyed "TeamA|TeamB" (order as played);
+        # the client resolves a result wherever those two teams actually meet, so
+        # pinning chains from R32 up through the final.
+        "results": results,
     }
     payload = json.dumps(data, ensure_ascii=False, indent=1)
     out = HERE / "bracket_data.json"

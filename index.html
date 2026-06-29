@@ -117,11 +117,11 @@
   </div>
   <div class="toolbar">
     <button class="tool" id="reset">↺ Reset to most-likely</button>
-    <button class="tool" id="toggle-odds">📊 Hide title odds</button>
+    <button class="tool" id="toggle-odds">📊 Show title odds</button>
   </div>
 </header>
 
-<section class="odds" id="odds">
+<section class="odds collapsed" id="odds">
   <h2>🏆 Win the Cup <span class="hint">— title odds from 500k bracket simulations
     <span id="odds-cond"></span></span></h2>
   <div class="board" id="oddsboard"></div>
@@ -150,15 +150,39 @@ function pWin(a, b){
   return 1 / (1 + Math.pow(10, -(ra - rb) / SCALE));
 }
 
+// Played-match results, any round (see build_bracket.py). resultFor is order-
+// independent. decidedAt resolves a result *at the node where the two teams
+// actually meet*: a node is decided only when both its feeders are themselves
+// decided and the realised matchup has a pinned result — so pins chain from
+// R32 up the bracket without ever touching hypothetical (modelled) matchups.
+const RESULTS = D.results || {};
+function resultFor(a, b){
+  return RESULTS[a + "|" + b] || RESULTS[b + "|" + a] || null;
+}
+function decidedAt(node){
+  let a, b;
+  if(node.fixed){
+    a = node.home; b = node.away;
+  } else {
+    const dA = decidedAt(NODES[node.childA]);
+    const dB = decidedAt(NODES[node.childB]);
+    if(!dA || !dB) return null;          // matchup not realised yet
+    a = dA.winner; b = dB.winner;
+  }
+  const r = resultFor(a, b);
+  return (r && (r.winner === a || r.winner === b)) ? r : null;
+}
+
 // Winner distribution for a node: team -> P(team wins this node). Mirrors the
 // exact propagation in simulate_bracket.py. A user pick forces that team to win
 // its match (prob 1 given it reached), so the surviving mass at the top equals
 // P(your picks all hold) and the normalised champion distribution is the title
 // odds *conditional on your picks*.
 function winnerDist(node){
+  const done = decidedAt(node);
+  if(done) return {[done.winner]: 1};                   // actual result, any round
   if(node.fixed){
     const a = node.home, b = node.away;
-    if(node.decided) return {[node.decided]: 1};        // actual result
     if(userPick[node.id] === a) return {[a]: 1};
     if(userPick[node.id] === b) return {[b]: 1};
     const p = pWin(a, b);
@@ -197,8 +221,7 @@ function buildTree(){
   let prev = [];
   D.r32.forEach((m, i) => {
     const id = "R0-"+i;
-    NODES[id] = {id, round:0, fixed:true, home:m.home, away:m.away, date:m.date,
-                 decided:m.decided||null, score:m.score||null};
+    NODES[id] = {id, round:0, fixed:true, home:m.home, away:m.away, date:m.date};
     prev.push(id);
   });
   let round = 1;
@@ -226,7 +249,8 @@ function teamsOf(node){
   return [winnerOf(NODES[node.childA]), winnerOf(NODES[node.childB])];
 }
 function winnerOf(node){
-  if(node.fixed && node.decided) return node.decided;   // actual result wins
+  const done = decidedAt(node);
+  if(done) return done.winner;                          // actual result wins, any round
   const [a,b] = teamsOf(node);
   if(!a || !b) return null;
   if(userPick[node.id] && (userPick[node.id]===a || userPick[node.id]===b))
@@ -243,7 +267,8 @@ function slotHTML(node, team, other, isAdv, isPicked){
       <span class="nm">winner ${tbdLabel(node)}</span></div>`;
   }
   const t = TEAM[team];
-  const decided = node.decided;
+  const done = decidedAt(node);
+  const decided = done ? done.winner : null;
   const won = decided && team === decided;
   const p = decided ? (won ? 1 : 0) : pWin(team, other);
   let cls = "";
@@ -326,8 +351,9 @@ function renderOdds(){
 }
 
 function matchLine(node,a,b){
-  if(node.decided){
-    return node.score ? `${node.score} · FT` : "FT";
+  const done = decidedAt(node);
+  if(done){
+    return done.score ? `${done.score} · FT` : "FT";
   }
   const p = pWin(a,b);
   return `${Math.round(p*100)}–${Math.round((1-p)*100)}`;
@@ -370,7 +396,7 @@ function renderChampion(){
 // ---- interaction ---------------------------------------------------------
 function onPick(nodeId, team){
   const node = NODES[nodeId];
-  if(node.fixed && node.decided) return;   // can't override a played result
+  if(decidedAt(node)) return;   // can't override a played result, any round
   const [a,b] = teamsOf(node);
   // toggle: clicking current pick/favourite clears override
   if(userPick[nodeId] === team){

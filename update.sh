@@ -3,7 +3,10 @@
 # Designed to run from cron in a git clone of the wc2026-bracket repo that has a
 # local (gitignored) .env carrying ODDS_API_KEY.
 set -euo pipefail
+# cron runs with a bare environment — pin PATH so python3/git/gh resolve.
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${PATH:-}"
 cd "$(dirname "$0")"
+echo "=== update $(date -u +%FT%TZ) ==="
 
 [ -f .env ] && { set -a; . ./.env; set +a; }
 

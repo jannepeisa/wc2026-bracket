@@ -26,6 +26,7 @@ HERE = Path(__file__).parent
 SPORT = "soccer_fifa_world_cup"
 BASE = f"https://api.the-odds-api.com/v4/sports/{SPORT}"
 LAY_BOOKS = {"betfair_ex_eu", "betfair_ex_uk", "matchbook"}
+KNOCKOUT_START = "2026-06-28"   # first R32 day; excludes group-stage games
 
 
 def get(url):
@@ -54,23 +55,28 @@ def main():
     market = load("odds_market.json", {"matches": []})
     by_key = {(m["home"], m["away"]): m for m in market["matches"]}
     results = load("results.json", {})
-    tracked = set(by_key)  # exactly the 16 R32 fixtures; never grow this
+    tracked = set(by_key)  # the 16 R32 fixtures — only these get odds refreshed
+    teams = {t for pair in tracked for t in pair}  # all 32 bracket teams
 
     changed = False
 
-    # --- scores -> results.json -------------------------------------------
+    # --- scores -> results.json (any knockout round) ----------------------
+    # A completed game on/after the knockout start, between two bracket teams,
+    # is a knockout match — record it. The client pins it at the node where the
+    # two teams meet, so this naturally covers R16 / QF / SF / final too.
     try:
         scores = get(f"{BASE}/scores/?apiKey={key}")
     except Exception as e:  # noqa: BLE001
         scores = []
         print(f"scores fetch failed: {e}", file=sys.stderr)
     for e in scores:
-        k = (e["home_team"], e["away_team"])
-        if not e.get("completed") or k not in tracked:
+        h, a = e["home_team"], e["away_team"]
+        if not e.get("completed") or e["commence_time"][:10] < KNOCKOUT_START:
+            continue
+        if h not in teams or a not in teams:
             continue
         sc = {s["name"]: int(s["score"]) for s in (e.get("scores") or [])
               if s.get("score") is not None}
-        h, a = k
         if h not in sc or a not in sc:
             continue
         if sc[h] == sc[a]:
@@ -85,7 +91,9 @@ def main():
             print(f"  result: {h} {sc[h]}-{sc[a]} {a} -> {winner}", file=sys.stderr)
 
     # --- odds -> odds_market.json (skip once all decided) ------------------
-    undecided = [k for k in tracked if f"{k[0]}|{k[1]}" not in results]
+    def is_decided(k):
+        return f"{k[0]}|{k[1]}" in results or f"{k[1]}|{k[0]}" in results
+    undecided = [k for k in tracked if not is_decided(k)]
     if undecided:
         try:
             events = get(f"{BASE}/odds?apiKey={key}&regions=eu&markets=h2h&oddsFormat=decimal")

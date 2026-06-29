@@ -32,11 +32,21 @@ def load():
     # r32 is already in bracket order; pair sequentially up the tree.
     leaves = [(m["home"], m["away"]) for m in d["r32"]]
     scale = d["meta"]["elo_scale"]
-    return elo, leaves, scale
+    results = d.get("results", {})
+    return elo, leaves, scale, results
 
 
-def make_pwin(elo, scale):
+def make_pwin(elo, scale, results=None):
+    """P(a beats b), forcing a pinned result wherever a and b actually meet."""
+    results = results or {}
+
+    def result_for(a, b):
+        return results.get(f"{a}|{b}") or results.get(f"{b}|{a}")
+
     def p(a, b):
+        r = result_for(a, b)
+        if r and r.get("winner") in (a, b):
+            return 1.0 if r["winner"] == a else 0.0
         return 1.0 / (1.0 + 10 ** (-(elo[a] - elo[b]) / scale))
     return p
 
@@ -107,8 +117,8 @@ def main():
     ap.add_argument("--seed", type=int, default=1)
     args = ap.parse_args()
 
-    elo, leaves, scale = load()
-    pwin = make_pwin(elo, scale)
+    elo, leaves, scale, results = load()
+    pwin = make_pwin(elo, scale, results)
 
     ex = exact(leaves, pwin)
     mc = simulate(leaves, pwin, args.sims, args.seed)
@@ -125,9 +135,9 @@ def main():
     for t in order:
         r = mc[t]
         champ = r[4]
-        odds = f"{1/champ:,.1f}" if champ > 0 else "—"
+        odds = f"{1/champ:,.0f}-1" if champ > 0 else "—"
         print(f"{t:<22}{r[0]*100:>6.1f}%{r[1]*100:>6.1f}%{r[2]*100:>6.1f}%"
-              f"{r[3]*100:>7.1f}%{champ*100:>7.1f}%{odds:>9}-1")
+              f"{r[3]*100:>7.1f}%{champ*100:>7.1f}%{odds:>11}")
 
     # write a machine-readable snapshot too
     out = {
