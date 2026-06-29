@@ -18,185 +18,185 @@ window.BRACKET_DATA = {
    "flag": "🇨🇦",
    "elo": 1785.7
   },
-  "Brazil": {
-   "name": "Brazil",
-   "short": "Brazil",
-   "flag": "🇧🇷",
-   "elo": 2002.6
-  },
-  "Japan": {
-   "name": "Japan",
-   "short": "Japan",
-   "flag": "🇯🇵",
-   "elo": 1862.4
-  },
-  "Germany": {
-   "name": "Germany",
-   "short": "Germany",
-   "flag": "🇩🇪",
-   "elo": 1966.2
-  },
-  "Paraguay": {
-   "name": "Paraguay",
-   "short": "Paraguay",
-   "flag": "🇵🇾",
-   "elo": 1728.8
-  },
   "Netherlands": {
    "name": "Netherlands",
    "short": "Netherlands",
    "flag": "🇳🇱",
-   "elo": 1958.6
+   "elo": 1950.4
   },
   "Morocco": {
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1891.4
+   "elo": 1899.6
   },
-  "Ivory Coast": {
-   "name": "Ivory Coast",
-   "short": "Ivory Coast",
-   "flag": "🇨🇮",
-   "elo": 1745.6
+  "Germany": {
+   "name": "Germany",
+   "short": "Germany",
+   "flag": "🇩🇪",
+   "elo": 1968.0
   },
-  "Norway": {
-   "name": "Norway",
-   "short": "Norway",
-   "flag": "🇳🇴",
-   "elo": 1819.4
+  "Paraguay": {
+   "name": "Paraguay",
+   "short": "Paraguay",
+   "flag": "🇵🇾",
+   "elo": 1727.0
   },
   "France": {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2054.0
+   "elo": 2058.2
   },
   "Sweden": {
    "name": "Sweden",
    "short": "Sweden",
    "flag": "🇸🇪",
-   "elo": 1781.0
-  },
-  "Mexico": {
-   "name": "Mexico",
-   "short": "Mexico",
-   "flag": "🇲🇽",
-   "elo": 1845.8
-  },
-  "Ecuador": {
-   "name": "Ecuador",
-   "short": "Ecuador",
-   "flag": "🇪🇨",
-   "elo": 1779.2
-  },
-  "England": {
-   "name": "England",
-   "short": "England",
-   "flag": "🏴",
-   "elo": 1984.2
-  },
-  "DR Congo": {
-   "name": "DR Congo",
-   "short": "DR Congo",
-   "flag": "🇨🇩",
-   "elo": 1710.8
+   "elo": 1776.8
   },
   "Belgium": {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1909.0
+   "elo": 1901.1
   },
   "Senegal": {
    "name": "Senegal",
    "short": "Senegal",
    "flag": "🇸🇳",
-   "elo": 1838.0
+   "elo": 1845.9
   },
   "USA": {
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1900.5
+   "elo": 1900.0
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
    "short": "Bosnia",
    "flag": "🇧🇦",
-   "elo": 1661.5
+   "elo": 1662.0
   },
   "Spain": {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2060.3
+   "elo": 2056.2
   },
   "Austria": {
    "name": "Austria",
    "short": "Austria",
    "flag": "🇦🇹",
-   "elo": 1784.7
+   "elo": 1788.8
   },
   "Portugal": {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 2000.3
+   "elo": 2009.0
   },
   "Croatia": {
    "name": "Croatia",
    "short": "Croatia",
    "flag": "🇭🇷",
-   "elo": 1894.7
+   "elo": 1886.0
+  },
+  "Brazil": {
+   "name": "Brazil",
+   "short": "Brazil",
+   "flag": "🇧🇷",
+   "elo": 2000.8
+  },
+  "Japan": {
+   "name": "Japan",
+   "short": "Japan",
+   "flag": "🇯🇵",
+   "elo": 1864.2
+  },
+  "Ivory Coast": {
+   "name": "Ivory Coast",
+   "short": "Ivory Coast",
+   "flag": "🇨🇮",
+   "elo": 1744.8
+  },
+  "Norway": {
+   "name": "Norway",
+   "short": "Norway",
+   "flag": "🇳🇴",
+   "elo": 1820.2
+  },
+  "Mexico": {
+   "name": "Mexico",
+   "short": "Mexico",
+   "flag": "🇲🇽",
+   "elo": 1846.4
+  },
+  "Ecuador": {
+   "name": "Ecuador",
+   "short": "Ecuador",
+   "flag": "🇪🇨",
+   "elo": 1778.6
+  },
+  "England": {
+   "name": "England",
+   "short": "England",
+   "flag": "🏴",
+   "elo": 1992.2
+  },
+  "DR Congo": {
+   "name": "DR Congo",
+   "short": "DR Congo",
+   "flag": "🇨🇩",
+   "elo": 1702.8
   },
   "Switzerland": {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1836.9
+   "elo": 1822.9
   },
   "Algeria": {
    "name": "Algeria",
    "short": "Algeria",
    "flag": "🇩🇿",
-   "elo": 1726.1
-  },
-  "Australia": {
-   "name": "Australia",
-   "short": "Australia",
-   "flag": "🇦🇺",
-   "elo": 1694.5
-  },
-  "Egypt": {
-   "name": "Egypt",
-   "short": "Egypt",
-   "flag": "🇪🇬",
-   "elo": 1725.5
-  },
-  "Argentina": {
-   "name": "Argentina",
-   "short": "Argentina",
-   "flag": "🇦🇷",
-   "elo": 2052.4
-  },
-  "Cape Verde": {
-   "name": "Cape Verde",
-   "short": "Cape Verde",
-   "flag": "🇨🇻",
-   "elo": 1687.6
+   "elo": 1740.1
   },
   "Colombia": {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1869.9
+   "elo": 1892.3
   },
   "Ghana": {
    "name": "Ghana",
    "short": "Ghana",
    "flag": "🇬🇭",
-   "elo": 1725.1
+   "elo": 1702.7
+  },
+  "Australia": {
+   "name": "Australia",
+   "short": "Australia",
+   "flag": "🇦🇺",
+   "elo": 1692.4
+  },
+  "Egypt": {
+   "name": "Egypt",
+   "short": "Egypt",
+   "flag": "🇪🇬",
+   "elo": 1727.6
+  },
+  "Argentina": {
+   "name": "Argentina",
+   "short": "Argentina",
+   "flag": "🇦🇷",
+   "elo": 2051.5
+  },
+  "Cape Verde": {
+   "name": "Cape Verde",
+   "short": "Cape Verde",
+   "flag": "🇨🇻",
+   "elo": 1688.5
   }
  },
  "r32": [
@@ -209,108 +209,108 @@ window.BRACKET_DATA = {
   },
   {
    "id": "R32-2",
-   "home": "Brazil",
-   "away": "Japan",
-   "date": "2026-06-29",
-   "p_home_adv": 0.6914
+   "home": "Netherlands",
+   "away": "Morocco",
+   "date": "2026-06-30",
+   "p_home_adv": 0.5725
   },
   {
    "id": "R32-3",
    "home": "Germany",
    "away": "Paraguay",
    "date": "2026-06-29",
-   "p_home_adv": 0.7968
+   "p_home_adv": 0.8002
   },
   {
    "id": "R32-4",
-   "home": "Netherlands",
-   "away": "Morocco",
-   "date": "2026-06-30",
-   "p_home_adv": 0.5956
-  },
-  {
-   "id": "R32-5",
-   "home": "Ivory Coast",
-   "away": "Norway",
-   "date": "2026-06-30",
-   "p_home_adv": 0.3954
-  },
-  {
-   "id": "R32-6",
    "home": "France",
    "away": "Sweden",
    "date": "2026-06-30",
-   "p_home_adv": 0.828
+   "p_home_adv": 0.8348
   },
   {
-   "id": "R32-7",
-   "home": "Mexico",
-   "away": "Ecuador",
-   "date": "2026-07-01",
-   "p_home_adv": 0.5947
-  },
-  {
-   "id": "R32-8",
-   "home": "England",
-   "away": "DR Congo",
-   "date": "2026-07-01",
-   "p_home_adv": 0.8283
-  },
-  {
-   "id": "R32-9",
+   "id": "R32-5",
    "home": "Belgium",
    "away": "Senegal",
    "date": "2026-07-01",
-   "p_home_adv": 0.6007
+   "p_home_adv": 0.5789
   },
   {
-   "id": "R32-10",
+   "id": "R32-6",
    "home": "USA",
    "away": "Bosnia & Herzegovina",
    "date": "2026-07-02",
-   "p_home_adv": 0.7983
+   "p_home_adv": 0.7973
   },
   {
-   "id": "R32-11",
+   "id": "R32-7",
    "home": "Spain",
    "away": "Austria",
    "date": "2026-07-02",
-   "p_home_adv": 0.8301
+   "p_home_adv": 0.8234
   },
   {
-   "id": "R32-12",
+   "id": "R32-8",
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.6475
+   "p_home_adv": 0.67
+  },
+  {
+   "id": "R32-9",
+   "home": "Brazil",
+   "away": "Japan",
+   "date": "2026-06-29",
+   "p_home_adv": 0.6869
+  },
+  {
+   "id": "R32-10",
+   "home": "Ivory Coast",
+   "away": "Norway",
+   "date": "2026-06-30",
+   "p_home_adv": 0.3931
+  },
+  {
+   "id": "R32-11",
+   "home": "Mexico",
+   "away": "Ecuador",
+   "date": "2026-07-01",
+   "p_home_adv": 0.5963
+  },
+  {
+   "id": "R32-12",
+   "home": "England",
+   "away": "DR Congo",
+   "date": "2026-07-01",
+   "p_home_adv": 0.8411
   },
   {
    "id": "R32-13",
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.6542
+   "p_home_adv": 0.617
   },
   {
    "id": "R32-14",
-   "home": "Australia",
-   "away": "Egypt",
-   "date": "2026-07-03",
-   "p_home_adv": 0.4556
-  },
-  {
-   "id": "R32-15",
-   "home": "Argentina",
-   "away": "Cape Verde",
-   "date": "2026-07-03",
-   "p_home_adv": 0.891
-  },
-  {
-   "id": "R32-16",
    "home": "Colombia",
    "away": "Ghana",
    "date": "2026-07-04",
-   "p_home_adv": 0.697
+   "p_home_adv": 0.7487
+  },
+  {
+   "id": "R32-15",
+   "home": "Australia",
+   "away": "Egypt",
+   "date": "2026-07-03",
+   "p_home_adv": 0.4496
+  },
+  {
+   "id": "R32-16",
+   "home": "Argentina",
+   "away": "Cape Verde",
+   "date": "2026-07-03",
+   "p_home_adv": 0.8899
   }
  ]
 };
