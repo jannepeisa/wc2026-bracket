@@ -42,11 +42,17 @@ advancing through the 2026 World Cup knockout rounds.
 
 ## Played matches
 
-`results.json` pins completed games: the winner advances with certainty (the
-bracket cell shows the score + `FT`, the loser is greyed, and the title odds
-treat that team as eliminated). Edit it by hand, or let `refresh.py` fill it
-from the live scores feed. Only Round-of-32 fixtures are pinned today — later
-rounds stay Elo-modelled.
+`results.json` pins completed games (`{"Home|Away": {"winner","score"}}`): the
+winner advances with certainty (the bracket cell shows the score + `FT`, the
+loser is greyed, and the title odds treat that team as eliminated). Edit it by
+hand, or let `refresh.py` fill it from the live scores feed.
+
+**Any round** can be pinned. A result is applied at the node where its two
+teams actually meet, and a node is treated as decided only when *both* its
+feeders are decided and the realised matchup has a result — so pins chain
+R32 → R16 → QF → SF → final, and a modelled (not-yet-played) matchup is never
+pinned by accident. A knockout that goes to penalties returns a level score the
+scraper can't resolve; add that winner to `results.json` by hand.
 
 ## Keeping it fresh
 
