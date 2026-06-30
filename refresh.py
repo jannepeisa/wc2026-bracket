@@ -26,7 +26,10 @@ HERE = Path(__file__).parent
 SPORT = "soccer_fifa_world_cup"
 BASE = f"https://api.the-odds-api.com/v4/sports/{SPORT}"
 LAY_BOOKS = {"betfair_ex_eu", "betfair_ex_uk", "matchbook"}
-KNOCKOUT_START = "2026-06-28"   # first R32 day; excludes group-stage games
+# Datetime (not just date) cutoff: the last group games kicked off ~06-28 03:00Z,
+# the first R32 game at 06-28 19:00Z — a noon cutoff cleanly separates them, so no
+# group-stage result can ever be mistaken for a knockout one.
+KNOCKOUT_START = "2026-06-28T12:00:00Z"
 
 
 def get(url):
@@ -65,13 +68,14 @@ def main():
     # is a knockout match — record it. The client pins it at the node where the
     # two teams meet, so this naturally covers R16 / QF / SF / final too.
     try:
-        scores = get(f"{BASE}/scores/?apiKey={key}")
+        # daysFrom=3 so recently-completed games don't age out of the window
+        scores = get(f"{BASE}/scores/?apiKey={key}&daysFrom=3")
     except Exception as e:  # noqa: BLE001
         scores = []
         print(f"scores fetch failed: {e}", file=sys.stderr)
     for e in scores:
         h, a = e["home_team"], e["away_team"]
-        if not e.get("completed") or e["commence_time"][:10] < KNOCKOUT_START:
+        if not e.get("completed") or e["commence_time"] < KNOCKOUT_START:
             continue
         if h not in teams or a not in teams:
             continue
