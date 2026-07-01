@@ -58,25 +58,25 @@ window.BRACKET_DATA = {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1902.5
+   "elo": 1904.1
   },
   "Senegal": {
    "name": "Senegal",
    "short": "Senegal",
    "flag": "🇸🇳",
-   "elo": 1844.5
+   "elo": 1842.9
   },
   "USA": {
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1896.4
+   "elo": 1896.1
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
    "short": "Bosnia",
    "flag": "🇧🇦",
-   "elo": 1665.6
+   "elo": 1665.9
   },
   "Spain": {
    "name": "Spain",
@@ -94,13 +94,13 @@ window.BRACKET_DATA = {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 2010.0
+   "elo": 2009.7
   },
   "Croatia": {
    "name": "Croatia",
    "short": "Croatia",
    "flag": "🇭🇷",
-   "elo": 1885.0
+   "elo": 1885.3
   },
   "Brazil": {
    "name": "Brazil",
@@ -130,73 +130,73 @@ window.BRACKET_DATA = {
    "name": "Mexico",
    "short": "Mexico",
    "flag": "🇲🇽",
-   "elo": 1847.7
+   "elo": 1846.6
   },
   "Ecuador": {
    "name": "Ecuador",
    "short": "Ecuador",
    "flag": "🇪🇨",
-   "elo": 1777.3
+   "elo": 1778.4
   },
   "England": {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1990.6
+   "elo": 1990.5
   },
   "DR Congo": {
    "name": "DR Congo",
    "short": "DR Congo",
    "flag": "🇨🇩",
-   "elo": 1704.4
+   "elo": 1704.5
   },
   "Switzerland": {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1820.8
+   "elo": 1821.8
   },
   "Algeria": {
    "name": "Algeria",
    "short": "Algeria",
    "flag": "🇩🇿",
-   "elo": 1742.2
+   "elo": 1741.2
   },
   "Colombia": {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1893.1
+   "elo": 1893.3
   },
   "Ghana": {
    "name": "Ghana",
    "short": "Ghana",
    "flag": "🇬🇭",
-   "elo": 1701.9
+   "elo": 1701.7
   },
   "Australia": {
    "name": "Australia",
    "short": "Australia",
    "flag": "🇦🇺",
-   "elo": 1692.6
+   "elo": 1692.9
   },
   "Egypt": {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1727.4
+   "elo": 1727.1
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2046.8
+   "elo": 2047.4
   },
   "Cape Verde": {
    "name": "Cape Verde",
    "short": "Cape Verde",
    "flag": "🇨🇻",
-   "elo": 1693.2
+   "elo": 1692.6
   }
  },
  "r32": [
@@ -233,14 +233,14 @@ window.BRACKET_DATA = {
    "home": "Belgium",
    "away": "Senegal",
    "date": "2026-07-01",
-   "p_home_adv": 0.5826
+   "p_home_adv": 0.5871
   },
   {
    "id": "R32-6",
    "home": "USA",
    "away": "Bosnia & Herzegovina",
    "date": "2026-07-02",
-   "p_home_adv": 0.7907
+   "p_home_adv": 0.79
   },
   {
    "id": "R32-7",
@@ -254,7 +254,7 @@ window.BRACKET_DATA = {
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.6726
+   "p_home_adv": 0.6717
   },
   {
    "id": "R32-9",
@@ -275,42 +275,42 @@ window.BRACKET_DATA = {
    "home": "Mexico",
    "away": "Ecuador",
    "date": "2026-07-01",
-   "p_home_adv": 0.6
+   "p_home_adv": 0.5969
   },
   {
    "id": "R32-12",
    "home": "England",
    "away": "DR Congo",
    "date": "2026-07-01",
-   "p_home_adv": 0.8385
+   "p_home_adv": 0.8384
   },
   {
    "id": "R32-13",
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.6114
+   "p_home_adv": 0.6139
   },
   {
    "id": "R32-14",
    "home": "Colombia",
    "away": "Ghana",
    "date": "2026-07-04",
-   "p_home_adv": 0.7504
+   "p_home_adv": 0.7508
   },
   {
    "id": "R32-15",
    "home": "Australia",
    "away": "Egypt",
    "date": "2026-07-03",
-   "p_home_adv": 0.4502
+   "p_home_adv": 0.4509
   },
   {
    "id": "R32-16",
    "home": "Argentina",
    "away": "Cape Verde",
    "date": "2026-07-03",
-   "p_home_adv": 0.8844
+   "p_home_adv": 0.8851
   }
  ],
  "results": {
@@ -333,6 +333,10 @@ window.BRACKET_DATA = {
   "Ivory Coast|Norway": {
    "winner": "Norway",
    "score": "1-2"
+  },
+  "France|Sweden": {
+   "winner": "France",
+   "score": "3-0"
   }
  }
 };
