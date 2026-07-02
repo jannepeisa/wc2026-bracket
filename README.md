@@ -14,14 +14,20 @@ advancing through the 2026 World Cup knockout rounds.
 
 ## How the numbers are made
 
-- **Round of 32** win probabilities come straight from the de-margined betting
-  market, mapping the 1X2 odds into a knockout win chance as
-  `p_home + 0.5·p_draw` (penalties ≈ coin flip).
-- **Later rounds** can't use fixed odds because the opponents depend on earlier
-  results, so each team gets a **calibrated Elo rating**: the rating gap inside
-  each R32 pair is set to reproduce the market exactly, while the pair's
-  midpoint comes from football-prior ratings so teams stay comparable across
-  the bracket. Any matchup is then `1 / (1 + 10^(-(Rₐ−R_b)/400))`.
+- **Quoted fixtures** get their win probabilities straight from the de-margined
+  betting market, mapping the 1X2 odds into a knockout win chance as
+  `p_home + 0.5·p_draw` (penalties ≈ coin flip). That's all 16 Round-of-32
+  games up front, plus each later-round fixture as soon as its pairing is
+  realised and bookmakers quote it (stored under `"knockout"` in
+  `odds_market.json`). Only **pre-kickoff** quotes are ever stored — once a
+  game kicks off the feed switches to in-play prices, which are ignored.
+- **Hypothetical matchups** (opponents not yet known) can't use fixed odds, so
+  each team gets a **calibrated Elo rating**: the rating gap inside each quoted
+  pair is set to reproduce the market exactly, while the pair's midpoint is
+  preserved (from football-prior ratings for R32, from the ratings calibrated
+  so far for later quotes) so teams stay comparable across the bracket. Any
+  matchup is then `1 / (1 + 10^(-(Rₐ−R_b)/400))`. Quotes apply in kickoff
+  order, so a team's next unplayed match is always market-exact.
 - The bracket pairing follows the **official R32 tree** (see `BRACKET_ORDER` in
   `build_bracket.py`) — note `odds_market.json` is in *chronological* order, not
   bracket order, so the build step reorders it.
@@ -58,7 +64,7 @@ scraper can't resolve; add that winner to `results.json` by hand.
 
 `update.sh` runs `refresh.py` then `build_bracket.py` and pushes only when the
 data moved. `refresh.py` makes two cheap Odds-API calls (~2 free-tier credits)
-and skips the odds call once every fixture is decided. A cron entry every 3 h
+and skips the odds call once the whole tournament is decided. A cron entry every 3 h
 (≈16 credits/day) stays comfortably inside the 500-credit monthly free tier:
 
 ```cron

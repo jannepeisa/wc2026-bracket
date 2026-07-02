@@ -5,10 +5,13 @@ Two cheap Odds-API calls (free-tier credits in brackets):
   - scores  GET /scores                      [1 credit]  -> results.json winners
   - odds    GET /odds  markets=h2h regions=eu [1 credit]  -> odds_market.json 1X2
 
-Only the 16 tracked R32 fixtures are touched (deeper rounds are Elo-modelled,
-not fetched). A played fixture leaves the odds feed but is kept in
-odds_market.json and pinned in results.json. Once every fixture is decided the
-odds call is skipped entirely, so spending tapers to ~1 credit/run and then 0.
+The 16 R32 fixtures refresh in place. Any OTHER upcoming match between two
+bracket teams is, in a single-elimination tournament, a realised later-round
+fixture (R16/QF/SF/final) — its quote is stored under "knockout" so
+build_bracket.py can calibrate Elo to the market there too. A played fixture
+leaves the odds feed but keeps its last pre-kickoff quote and gets pinned in
+results.json. Once the whole tournament is decided the odds call is skipped,
+so spending tapers to ~1 credit/run and then 0.
 
 Budget math: at ~2 credits/run, every 3 h (8 runs/day) ≈ 16 credits/day, well
 within the 500/month free tier across the ~3-week knockout stage.
@@ -95,11 +98,11 @@ def main():
             changed = True
             print(f"  result: {h} {sc[h]}-{sc[a]} {a} -> {winner}", file=sys.stderr)
 
-    # --- odds -> odds_market.json (skip once all decided) ------------------
-    def is_decided(k):
-        return f"{k[0]}|{k[1]}" in results or f"{k[1]}|{k[0]}" in results
-    undecided = [k for k in tracked if not is_decided(k)]
-    if undecided:
+    # --- odds -> odds_market.json (skip once the tournament is decided) ----
+    # 31 games decide a 32-team knockout; the scores loop also records the
+    # third-place playoff, hence 32 as the "everything is over" count.
+    knockout = market.setdefault("knockout", {})
+    if len(results) < 2 * len(tracked):
         try:
             events = get(f"{BASE}/odds?apiKey={key}&regions=eu&markets=h2h&oddsFormat=decimal")
         except Exception as e:  # noqa: BLE001
@@ -107,8 +110,8 @@ def main():
             print(f"odds fetch failed: {e}", file=sys.stderr)
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         for e in events:
-            k = (e["home_team"], e["away_team"])
-            if k not in tracked:        # only refresh our 16 fixtures
+            h, a = e["home_team"], e["away_team"]
+            if h not in teams or a not in teams:   # not a knockout fixture
                 continue
             # Once a match kicks off the feed switches to *in-play* prices,
             # which converge on the live scoreline (e.g. 1.01 for a side that
@@ -116,10 +119,9 @@ def main():
             # odds: build_bracket.py calibrates Elo from them, so a live
             # snapshot wildly inflates/deflates a team's tournament rating.
             if e.get("commence_time", "") <= now:
-                print(f"  skip in-play/finished: {k[0]} v {k[1]} "
+                print(f"  skip in-play/finished: {h} v {a} "
                       f"(kicked off {e.get('commence_time')})", file=sys.stderr)
                 continue
-            h, a = k
             hp, dp, ap = [], [], []
             for bk in e.get("bookmakers", []):
                 if bk.get("key") in LAY_BOOKS:
@@ -134,21 +136,31 @@ def main():
                 continue
             avg = lambda L: sum(L) / len(L)
             ph, pd, pa = demargin(avg(hp), avg(dp), avg(ap))
-            rec = by_key[k]
-            new = {**rec, "home": h, "away": a, "date": e["commence_time"][:10],
-                   "odds_1x2": [avg(hp), avg(dp), avg(ap)],
-                   "fair_1x2": [round(ph, 4), round(pd, 4), round(pa, 4)],
-                   "source": f"TheOddsAPI / {len(hp)} books (h2h)"}
-            if new != rec:
-                by_key[k] = new
-                changed = True
+            quote = {"home": h, "away": a, "date": e["commence_time"][:10],
+                     "kickoff_utc": e["commence_time"],
+                     "odds_1x2": [avg(hp), avg(dp), avg(ap)],
+                     "fair_1x2": [round(ph, 4), round(pd, 4), round(pa, 4)],
+                     "source": f"TheOddsAPI / {len(hp)} books (h2h)"}
+            if (h, a) in tracked:                  # one of the 16 R32 fixtures
+                rec = by_key[(h, a)]
+                new = {**rec, **quote}
+                if new != rec:
+                    by_key[(h, a)] = new
+                    changed = True
+            else:                                  # realised R16+ fixture
+                if knockout.get(f"{h}|{a}") != quote:
+                    knockout[f"{h}|{a}"] = quote
+                    changed = True
+                    print(f"  knockout quote: {h} v {a} "
+                          f"fair={quote['fair_1x2']}", file=sys.stderr)
     else:
-        print("  all fixtures decided — skipping odds fetch", file=sys.stderr)
+        print("  tournament decided — skipping odds fetch", file=sys.stderr)
 
     market["matches"] = list(by_key.values())
     (HERE / "odds_market.json").write_text(json.dumps(market, indent=1, ensure_ascii=False))
     (HERE / "results.json").write_text(json.dumps(results, indent=1, ensure_ascii=False))
-    print(f"odds_market.json: {len(market['matches'])} fixtures · "
+    print(f"odds_market.json: {len(market['matches'])} R32 fixtures · "
+          f"{len(knockout)} later-round quotes · "
           f"results.json: {len(results)} decided · changed={changed}")
 
 
