@@ -16,7 +16,7 @@
    "name": "Canada",
    "short": "Canada",
    "flag": "🇨🇦",
-   "elo": 1785.7
+   "elo": 1782.8
   },
   "Netherlands": {
    "name": "Netherlands",
@@ -28,7 +28,7 @@
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1905.5
+   "elo": 1908.4
   },
   "Germany": {
    "name": "Germany",
@@ -40,13 +40,13 @@
    "name": "Paraguay",
    "short": "Paraguay",
    "flag": "🇵🇾",
-   "elo": 1725.2
+   "elo": 1721.1
   },
   "France": {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2053.3
+   "elo": 2057.4
   },
   "Sweden": {
    "name": "Sweden",
@@ -58,7 +58,7 @@
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1906.8
+   "elo": 1901.2
   },
   "Senegal": {
    "name": "Senegal",
@@ -70,7 +70,7 @@
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1899.7
+   "elo": 1905.3
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
@@ -94,19 +94,19 @@
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 2019.9
+   "elo": 2020.2
   },
   "Croatia": {
    "name": "Croatia",
    "short": "Croatia",
    "flag": "🇭🇷",
-   "elo": 1875.1
+   "elo": 1874.8
   },
   "Brazil": {
    "name": "Brazil",
    "short": "Brazil",
    "flag": "🇧🇷",
-   "elo": 1998.0
+   "elo": 1956.6
   },
   "Japan": {
    "name": "Japan",
@@ -124,13 +124,13 @@
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1814.3
+   "elo": 1855.7
   },
   "Mexico": {
    "name": "Mexico",
    "short": "Mexico",
    "flag": "🇲🇽",
-   "elo": 1846.6
+   "elo": 1903.2
   },
   "Ecuador": {
    "name": "Ecuador",
@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1990.1
+   "elo": 1933.5
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,49 +154,49 @@
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1832.8
+   "elo": 1829.0
   },
   "Algeria": {
    "name": "Algeria",
    "short": "Algeria",
    "flag": "🇩🇿",
-   "elo": 1730.2
+   "elo": 1734.0
   },
   "Colombia": {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1894.1
+   "elo": 1903.3
   },
   "Ghana": {
    "name": "Ghana",
    "short": "Ghana",
    "flag": "🇬🇭",
-   "elo": 1700.9
+   "elo": 1691.7
   },
   "Australia": {
    "name": "Australia",
    "short": "Australia",
    "flag": "🇦🇺",
-   "elo": 1692.7
+   "elo": 1692.3
   },
   "Egypt": {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1727.3
+   "elo": 1727.7
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2052.7
+   "elo": 2054.0
   },
   "Cape Verde": {
    "name": "Cape Verde",
    "short": "Cape Verde",
    "flag": "🇨🇻",
-   "elo": 1687.3
+   "elo": 1686.0
   }
  },
  "r32": [
@@ -254,7 +254,7 @@
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.697
+   "p_home_adv": 0.6978
   },
   {
    "id": "R32-9",
@@ -289,31 +289,52 @@
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.6434
+   "p_home_adv": 0.6335
   },
   {
    "id": "R32-14",
    "home": "Colombia",
    "away": "Ghana",
    "date": "2026-07-04",
-   "p_home_adv": 0.7525
+   "p_home_adv": 0.7718
   },
   {
    "id": "R32-15",
    "home": "Australia",
    "away": "Egypt",
    "date": "2026-07-03",
-   "p_home_adv": 0.4502
+   "p_home_adv": 0.4493
   },
   {
    "id": "R32-16",
    "home": "Argentina",
    "away": "Cape Verde",
    "date": "2026-07-03",
-   "p_home_adv": 0.8912
+   "p_home_adv": 0.8927
   }
  ],
- "knockout_market": {},
+ "knockout_market": {
+  "Canada|Morocco": {
+   "p_home_adv": 0.3267,
+   "date": "2026-07-04"
+  },
+  "Paraguay|France": {
+   "p_home_adv": 0.1261,
+   "date": "2026-07-04"
+  },
+  "Brazil|Norway": {
+   "p_home_adv": 0.6413,
+   "date": "2026-07-05"
+  },
+  "Mexico|England": {
+   "p_home_adv": 0.4565,
+   "date": "2026-07-06"
+  },
+  "USA|Belgium": {
+   "p_home_adv": 0.5059,
+   "date": "2026-07-07"
+  }
+ },
  "results": {
   "South Africa|Canada": {
    "winner": "Canada",
