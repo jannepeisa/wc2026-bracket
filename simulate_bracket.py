@@ -7,7 +7,9 @@ probability of reaching each round and of winning the tournament.
 
 Win model is identical to the web page:
     p(A beats B) = 1 / (1 + 10**(-(elo_A - elo_B)/400))
-R32 matches reproduce the betting market; deeper rounds use calibrated Elo.
+Every market-quoted fixture (R32, plus later rounds once their pairings are
+realised) is reproduced exactly by the calibrated Elo; only hypothetical
+matchups are pure model.
 
 A closed-form (exact) calculation is run alongside the simulation as a check —
 for an independent-match bracket the round-reach probabilities can be computed

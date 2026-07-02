@@ -3,7 +3,7 @@
   "title": "World Cup 2026 — Knockout Bracket",
   "source": "TheOddsAPI consensus (de-margined) + calibrated Elo",
   "elo_scale": 400.0,
-  "note": "Round-of-32 win probabilities reproduce the betting market exactly; later rounds use calibrated Elo because the opponents depend on earlier results."
+  "note": "Win probabilities reproduce the betting market exactly wherever a fixture is quoted (Round of 32, and later rounds once their pairings are known); hypothetical matchups use calibrated Elo."
  },
  "teams": {
   "South Africa": {
@@ -313,6 +313,7 @@
    "p_home_adv": 0.8912
   }
  ],
+ "knockout_market": {},
  "results": {
   "South Africa|Canada": {
    "winner": "Canada",

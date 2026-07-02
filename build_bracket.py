@@ -19,8 +19,13 @@ known) we need one globally-consistent strength number per team. We use Elo:
 Calibration keeps the model honest where we have data and reasonable where we
 don't: each R32 pair's *midpoint* comes from football-prior ratings (so pairs
 are comparable across the bracket), while the *rating gap within the pair* is
-set to exactly reproduce the market win probability. Result: R32 cells match
-the bookmakers to the decimal; R16+ cells fall back to the priors.
+set to exactly reproduce the market win probability.
+
+Once later-round pairings are realised, refresh.py stores their pre-match
+quotes under "knockout" in odds_market.json. Those are applied on top in
+kickoff order with the same midpoint-preserving scheme, so every quoted node —
+any round — matches the bookmakers to the decimal; only genuinely hypothetical
+matchups fall back to the R32-calibrated ratings.
 """
 
 import json
@@ -130,17 +135,41 @@ def main():
             "p_home_adv": round(p_home_adv, 4),  # market-exact, for reference
         })
 
+    # Realised later-round fixtures with market quotes: re-set each pair's
+    # rating gap to the market, keeping the pair's midpoint from the ratings
+    # calibrated so far. Applied in kickoff order, a team's most recent quote
+    # is always the last adjustment it receives, so the model reproduces the
+    # market exactly at its next unplayed node (earlier nodes are pinned by
+    # results anyway) and deeper hypotheticals inherit the refreshed ratings.
+    knockout = market.get("knockout", {})
+    for q in sorted(knockout.values(), key=lambda q: q.get("kickoff_utc", "")):
+        h, a = q["home"], q["away"]
+        if h not in teams or a not in teams:
+            continue
+        ph, pd, pa = q["fair_1x2"]
+        p_home_adv = ph + 0.5 * pd
+        mid = (teams[h]["elo"] + teams[a]["elo"]) / 2.0
+        gap = ELO_SCALE * logit10(p_home_adv)
+        teams[h]["elo"] = round(mid + gap / 2.0, 1)
+        teams[a]["elo"] = round(mid - gap / 2.0, 1)
+
     data = {
         "meta": {
             "title": "World Cup 2026 — Knockout Bracket",
             "source": "TheOddsAPI consensus (de-margined) + calibrated Elo",
             "elo_scale": ELO_SCALE,
-            "note": ("Round-of-32 win probabilities reproduce the betting "
-                     "market exactly; later rounds use calibrated Elo because "
-                     "the opponents depend on earlier results."),
+            "note": ("Win probabilities reproduce the betting market exactly "
+                     "wherever a fixture is quoted (Round of 32, and later "
+                     "rounds once their pairings are known); hypothetical "
+                     "matchups use calibrated Elo."),
         },
         "teams": teams,
         "r32": r32,
+        # Later-round market quotes actually used in calibration, for reference.
+        "knockout_market": {k: {"p_home_adv": round(q["fair_1x2"][0] + 0.5 * q["fair_1x2"][1], 4),
+                                "date": q.get("date")}
+                            for k, q in knockout.items()
+                            if q["home"] in teams and q["away"] in teams},
         # Played-match results, any round. Keyed "TeamA|TeamB" (order as played);
         # the client resolves a result wherever those two teams actually meet, so
         # pinning chains from R32 up through the final.
@@ -152,7 +181,8 @@ def main():
     # Also emit a JS global so index.html works from file:// (no fetch/CORS).
     js = HERE / "bracket_data.js"
     js.write_text("window.BRACKET_DATA = " + payload + ";\n")
-    print(f"wrote {out} and {js} — {len(teams)} teams, {len(r32)} R32 matches")
+    print(f"wrote {out} and {js} — {len(teams)} teams, {len(r32)} R32 matches, "
+          f"{len(data['knockout_market'])} later-round market quotes")
 
     # sanity: top rated teams
     top = sorted(teams.values(), key=lambda t: -t["elo"])[:6]
