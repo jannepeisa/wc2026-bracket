@@ -82,25 +82,25 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2051.5
+   "elo": 2050.7
   },
   "Austria": {
    "name": "Austria",
    "short": "Austria",
    "flag": "🇦🇹",
-   "elo": 1793.5
+   "elo": 1794.3
   },
   "Portugal": {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 2012.2
+   "elo": 2011.6
   },
   "Croatia": {
    "name": "Croatia",
    "short": "Croatia",
    "flag": "🇭🇷",
-   "elo": 1882.8
+   "elo": 1883.4
   },
   "Brazil": {
    "name": "Brazil",
@@ -154,13 +154,13 @@
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1823.1
+   "elo": 1823.5
   },
   "Algeria": {
    "name": "Algeria",
    "short": "Algeria",
    "flag": "🇩🇿",
-   "elo": 1739.9
+   "elo": 1739.5
   },
   "Colombia": {
    "name": "Colombia",
@@ -178,25 +178,25 @@
    "name": "Australia",
    "short": "Australia",
    "flag": "🇦🇺",
-   "elo": 1693.1
+   "elo": 1692.6
   },
   "Egypt": {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1726.9
+   "elo": 1727.4
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2049.4
+   "elo": 2049.5
   },
   "Cape Verde": {
    "name": "Cape Verde",
    "short": "Cape Verde",
    "flag": "🇨🇻",
-   "elo": 1690.6
+   "elo": 1690.5
   }
  },
  "r32": [
@@ -247,14 +247,14 @@
    "home": "Spain",
    "away": "Austria",
    "date": "2026-07-02",
-   "p_home_adv": 0.8153
+   "p_home_adv": 0.814
   },
   {
    "id": "R32-8",
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.6781
+   "p_home_adv": 0.6764
   },
   {
    "id": "R32-9",
@@ -289,7 +289,7 @@
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.6175
+   "p_home_adv": 0.6185
   },
   {
    "id": "R32-14",
@@ -303,14 +303,14 @@
    "home": "Australia",
    "away": "Egypt",
    "date": "2026-07-03",
-   "p_home_adv": 0.4516
+   "p_home_adv": 0.4502
   },
   {
    "id": "R32-16",
    "home": "Argentina",
    "away": "Cape Verde",
    "date": "2026-07-03",
-   "p_home_adv": 0.8875
+   "p_home_adv": 0.8877
   }
  ],
  "results": {
@@ -349,6 +349,10 @@
   "Belgium|Senegal": {
    "winner": "Belgium",
    "score": "3-2"
+  },
+  "USA|Bosnia & Herzegovina": {
+   "winner": "USA",
+   "score": "2-0"
   }
  }
 }
