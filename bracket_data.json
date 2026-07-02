@@ -82,25 +82,25 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2050.8
+   "elo": 2048.8
   },
   "Austria": {
    "name": "Austria",
    "short": "Austria",
    "flag": "🇦🇹",
-   "elo": 1794.2
+   "elo": 1796.2
   },
   "Portugal": {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 2015.5
+   "elo": 2019.9
   },
   "Croatia": {
    "name": "Croatia",
    "short": "Croatia",
    "flag": "🇭🇷",
-   "elo": 1879.5
+   "elo": 1875.1
   },
   "Brazil": {
    "name": "Brazil",
@@ -154,49 +154,49 @@
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1828.1
+   "elo": 1832.8
   },
   "Algeria": {
    "name": "Algeria",
    "short": "Algeria",
    "flag": "🇩🇿",
-   "elo": 1734.9
+   "elo": 1730.2
   },
   "Colombia": {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1893.4
+   "elo": 1894.1
   },
   "Ghana": {
    "name": "Ghana",
    "short": "Ghana",
    "flag": "🇬🇭",
-   "elo": 1701.6
+   "elo": 1700.9
   },
   "Australia": {
    "name": "Australia",
    "short": "Australia",
    "flag": "🇦🇺",
-   "elo": 1692.2
+   "elo": 1692.7
   },
   "Egypt": {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1727.8
+   "elo": 1727.3
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2050.6
+   "elo": 2052.7
   },
   "Cape Verde": {
    "name": "Cape Verde",
    "short": "Cape Verde",
    "flag": "🇨🇻",
-   "elo": 1689.4
+   "elo": 1687.3
   }
  },
  "r32": [
@@ -247,14 +247,14 @@
    "home": "Spain",
    "away": "Austria",
    "date": "2026-07-02",
-   "p_home_adv": 0.8142
+   "p_home_adv": 0.8106
   },
   {
    "id": "R32-8",
    "home": "Portugal",
    "away": "Croatia",
    "date": "2026-07-02",
-   "p_home_adv": 0.6862
+   "p_home_adv": 0.697
   },
   {
    "id": "R32-9",
@@ -289,28 +289,28 @@
    "home": "Switzerland",
    "away": "Algeria",
    "date": "2026-07-03",
-   "p_home_adv": 0.631
+   "p_home_adv": 0.6434
   },
   {
    "id": "R32-14",
    "home": "Colombia",
    "away": "Ghana",
    "date": "2026-07-04",
-   "p_home_adv": 0.751
+   "p_home_adv": 0.7525
   },
   {
    "id": "R32-15",
    "home": "Australia",
    "away": "Egypt",
    "date": "2026-07-03",
-   "p_home_adv": 0.449
+   "p_home_adv": 0.4502
   },
   {
    "id": "R32-16",
    "home": "Argentina",
    "away": "Cape Verde",
    "date": "2026-07-03",
-   "p_home_adv": 0.8888
+   "p_home_adv": 0.8912
   }
  ],
  "results": {
