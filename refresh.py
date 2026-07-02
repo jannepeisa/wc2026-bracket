@@ -20,6 +20,7 @@ import json
 import os
 import sys
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -104,9 +105,19 @@ def main():
         except Exception as e:  # noqa: BLE001
             events = []
             print(f"odds fetch failed: {e}", file=sys.stderr)
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         for e in events:
             k = (e["home_team"], e["away_team"])
             if k not in tracked:        # only refresh our 16 fixtures
+                continue
+            # Once a match kicks off the feed switches to *in-play* prices,
+            # which converge on the live scoreline (e.g. 1.01 for a side that
+            # is 2-1 up in the 88th). Those must never overwrite the pre-match
+            # odds: build_bracket.py calibrates Elo from them, so a live
+            # snapshot wildly inflates/deflates a team's tournament rating.
+            if e.get("commence_time", "") <= now:
+                print(f"  skip in-play/finished: {k[0]} v {k[1]} "
+                      f"(kicked off {e.get('commence_time')})", file=sys.stderr)
                 continue
             h, a = k
             hp, dp, ap = [], [], []

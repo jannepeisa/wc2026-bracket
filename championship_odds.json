@@ -12,313 +12,247 @@
   ]
  },
  "teams": {
-  "Argentina": {
-   "reach": {
-    "Round of 16": 0.88518,
-    "Quarter-final": 0.7736,
-    "Semi-final": 0.59301,
-    "Final": 0.36692,
-    "Champion": 0.21131
-   },
-   "champion_pct": 21.13,
-   "fair_decimal_odds": 4.73
-  },
   "France": {
    "reach": {
-    "Round of 16": 0.82394,
-    "Quarter-final": 0.71402,
-    "Semi-final": 0.53282,
-    "Final": 0.32061,
-    "Champion": 0.18918
+    "Round of 16": 1.0,
+    "Quarter-final": 0.86859,
+    "Semi-final": 0.64441,
+    "Final": 0.38826,
+    "Champion": 0.22915
    },
-   "champion_pct": 18.92,
-   "fair_decimal_odds": 5.29
+   "champion_pct": 22.92,
+   "fair_decimal_odds": 4.36
+  },
+  "Argentina": {
+   "reach": {
+    "Round of 16": 0.88852,
+    "Quarter-final": 0.77812,
+    "Semi-final": 0.59725,
+    "Final": 0.36997,
+    "Champion": 0.20975
+   },
+   "champion_pct": 20.97,
+   "fair_decimal_odds": 4.77
   },
   "Spain": {
    "reach": {
-    "Round of 16": 0.8213,
-    "Quarter-final": 0.5069,
-    "Semi-final": 0.37025,
-    "Final": 0.23152,
-    "Champion": 0.13771
+    "Round of 16": 0.81505,
+    "Quarter-final": 0.49496,
+    "Semi-final": 0.34685,
+    "Final": 0.20269,
+    "Champion": 0.11916
    },
-   "champion_pct": 13.77,
-   "fair_decimal_odds": 7.26
+   "champion_pct": 11.92,
+   "fair_decimal_odds": 8.39
   },
   "Brazil": {
    "reach": {
     "Round of 16": 1.0,
-    "Quarter-final": 0.7684,
-    "Semi-final": 0.46196,
-    "Final": 0.25396,
-    "Champion": 0.12954
+    "Quarter-final": 0.74185,
+    "Semi-final": 0.42319,
+    "Final": 0.23056,
+    "Champion": 0.11399
    },
-   "champion_pct": 12.95,
-   "fair_decimal_odds": 7.72
+   "champion_pct": 11.4,
+   "fair_decimal_odds": 8.77
   },
   "England": {
    "reach": {
-    "Round of 16": 0.8423,
-    "Quarter-final": 0.61404,
-    "Semi-final": 0.3384,
-    "Final": 0.18394,
-    "Champion": 0.09224
+    "Round of 16": 1.0,
+    "Quarter-final": 0.69548,
+    "Semi-final": 0.38293,
+    "Final": 0.2047,
+    "Champion": 0.09896
    },
-   "champion_pct": 9.22,
-   "fair_decimal_odds": 10.84
+   "champion_pct": 9.9,
+   "fair_decimal_odds": 10.11
   },
   "Portugal": {
    "reach": {
-    "Round of 16": 0.67366,
-    "Quarter-final": 0.33509,
-    "Semi-final": 0.22721,
-    "Final": 0.12913,
-    "Champion": 0.06881
+    "Round of 16": 0.68642,
+    "Quarter-final": 0.34977,
+    "Semi-final": 0.2298,
+    "Final": 0.12293,
+    "Champion": 0.06623
    },
-   "champion_pct": 6.88,
-   "fair_decimal_odds": 14.53
+   "champion_pct": 6.62,
+   "fair_decimal_odds": 15.1
   },
   "Morocco": {
    "reach": {
     "Round of 16": 1.0,
-    "Quarter-final": 0.6578,
-    "Semi-final": 0.27023,
-    "Final": 0.10717,
-    "Champion": 0.04111
+    "Quarter-final": 0.66626,
+    "Semi-final": 0.23793,
+    "Final": 0.09553,
+    "Champion": 0.0374
    },
-   "champion_pct": 4.11,
-   "fair_decimal_odds": 24.33
-  },
-  "Colombia": {
-   "reach": {
-    "Round of 16": 0.7497,
-    "Quarter-final": 0.48237,
-    "Semi-final": 0.19021,
-    "Final": 0.07772,
-    "Champion": 0.02847
-   },
-   "champion_pct": 2.85,
-   "fair_decimal_odds": 35.12
-  },
-  "USA": {
-   "reach": {
-    "Round of 16": 0.79436,
-    "Quarter-final": 0.42181,
-    "Semi-final": 0.14777,
-    "Final": 0.0634,
-    "Champion": 0.02432
-   },
-   "champion_pct": 2.43,
-   "fair_decimal_odds": 41.12
+   "champion_pct": 3.74,
+   "fair_decimal_odds": 26.74
   },
   "Belgium": {
    "reach": {
-    "Round of 16": 0.58086,
-    "Quarter-final": 0.32715,
-    "Semi-final": 0.11566,
-    "Final": 0.04939,
-    "Champion": 0.01912
+    "Round of 16": 1.0,
+    "Quarter-final": 0.5095,
+    "Semi-final": 0.18354,
+    "Final": 0.0728,
+    "Champion": 0.0285
    },
-   "champion_pct": 1.91,
-   "fair_decimal_odds": 52.31
+   "champion_pct": 2.85,
+   "fair_decimal_odds": 35.09
+  },
+  "Colombia": {
+   "reach": {
+    "Round of 16": 0.7501,
+    "Quarter-final": 0.4794,
+    "Semi-final": 0.18696,
+    "Final": 0.07529,
+    "Champion": 0.02653
+   },
+   "champion_pct": 2.65,
+   "fair_decimal_odds": 37.7
+  },
+  "USA": {
+   "reach": {
+    "Round of 16": 1.0,
+    "Quarter-final": 0.4905,
+    "Semi-final": 0.1729,
+    "Final": 0.06705,
+    "Champion": 0.02544
+   },
+   "champion_pct": 2.54,
+   "fair_decimal_odds": 39.31
   },
   "Mexico": {
    "reach": {
-    "Round of 16": 0.59696,
-    "Quarter-final": 0.21642,
-    "Semi-final": 0.07781,
-    "Final": 0.02769,
-    "Champion": 0.00854
+    "Round of 16": 1.0,
+    "Quarter-final": 0.30452,
+    "Semi-final": 0.10994,
+    "Final": 0.03889,
+    "Champion": 0.01155
    },
-   "champion_pct": 0.85,
-   "fair_decimal_odds": 117.12
-  },
-  "Croatia": {
-   "reach": {
-    "Round of 16": 0.32634,
-    "Quarter-final": 0.10954,
-    "Semi-final": 0.05568,
-    "Final": 0.02279,
-    "Champion": 0.00824
-   },
-   "champion_pct": 0.82,
-   "fair_decimal_odds": 121.36
+   "champion_pct": 1.15,
+   "fair_decimal_odds": 86.6
   },
   "Switzerland": {
    "reach": {
-    "Round of 16": 0.61326,
-    "Quarter-final": 0.28516,
-    "Semi-final": 0.09001,
-    "Final": 0.02833,
-    "Champion": 0.00786
+    "Round of 16": 0.63026,
+    "Quarter-final": 0.29826,
+    "Semi-final": 0.0948,
+    "Final": 0.02999,
+    "Champion": 0.00809
    },
-   "champion_pct": 0.79,
-   "fair_decimal_odds": 127.16
+   "champion_pct": 0.81,
+   "fair_decimal_odds": 123.64
   },
-  "Senegal": {
+  "Norway": {
    "reach": {
-    "Round of 16": 0.41914,
-    "Quarter-final": 0.2045,
-    "Semi-final": 0.05881,
-    "Final": 0.02132,
-    "Champion": 0.0067
+    "Round of 16": 1.0,
+    "Quarter-final": 0.25815,
+    "Semi-final": 0.08393,
+    "Final": 0.02645,
+    "Champion": 0.00716
    },
-   "champion_pct": 0.67,
-   "fair_decimal_odds": 149.34
+   "champion_pct": 0.72,
+   "fair_decimal_odds": 139.66
+  },
+  "Croatia": {
+   "reach": {
+    "Round of 16": 0.31358,
+    "Quarter-final": 0.10503,
+    "Semi-final": 0.04913,
+    "Final": 0.01782,
+    "Champion": 0.00618
+   },
+   "champion_pct": 0.62,
+   "fair_decimal_odds": 161.86
   },
   "Canada": {
    "reach": {
     "Round of 16": 1.0,
-    "Quarter-final": 0.3422,
-    "Semi-final": 0.09794,
-    "Final": 0.02586,
-    "Champion": 0.00648
+    "Quarter-final": 0.33374,
+    "Semi-final": 0.07681,
+    "Final": 0.02001,
+    "Champion": 0.00499
    },
-   "champion_pct": 0.65,
-   "fair_decimal_odds": 154.37
-  },
-  "Norway": {
-   "reach": {
-    "Round of 16": 0.59466,
-    "Quarter-final": 0.15308,
-    "Semi-final": 0.05562,
-    "Final": 0.01774,
-    "Champion": 0.00521
-   },
-   "champion_pct": 0.52,
-   "fair_decimal_odds": 192.09
-  },
-  "Sweden": {
-   "reach": {
-    "Round of 16": 0.17606,
-    "Quarter-final": 0.10204,
-    "Semi-final": 0.03998,
-    "Final": 0.01022,
-    "Champion": 0.00259
-   },
-   "champion_pct": 0.26,
-   "fair_decimal_odds": 385.51
+   "champion_pct": 0.5,
+   "fair_decimal_odds": 200.4
   },
   "Paraguay": {
    "reach": {
     "Round of 16": 1.0,
-    "Quarter-final": 0.18394,
-    "Semi-final": 0.05903,
-    "Final": 0.01188,
-    "Champion": 0.00233
+    "Quarter-final": 0.13141,
+    "Semi-final": 0.04085,
+    "Final": 0.00813,
+    "Champion": 0.00156
    },
-   "champion_pct": 0.23,
-   "fair_decimal_odds": 428.45
-  },
-  "Ecuador": {
-   "reach": {
-    "Round of 16": 0.40304,
-    "Quarter-final": 0.1158,
-    "Semi-final": 0.03255,
-    "Final": 0.00925,
-    "Champion": 0.00219
-   },
-   "champion_pct": 0.22,
-   "fair_decimal_odds": 456.62
-  },
-  "Algeria": {
-   "reach": {
-    "Round of 16": 0.38674,
-    "Quarter-final": 0.13891,
-    "Semi-final": 0.03283,
-    "Final": 0.00747,
-    "Champion": 0.00152
-   },
-   "champion_pct": 0.15,
-   "fair_decimal_odds": 656.17
+   "champion_pct": 0.16,
+   "fair_decimal_odds": 641.85
   },
   "Egypt": {
    "reach": {
-    "Round of 16": 0.55139,
-    "Quarter-final": 0.10093,
-    "Semi-final": 0.03548,
-    "Final": 0.00769,
-    "Champion": 0.00145
+    "Round of 16": 0.55196,
+    "Quarter-final": 0.09968,
+    "Semi-final": 0.03483,
+    "Final": 0.00736,
+    "Champion": 0.00131
    },
-   "champion_pct": 0.14,
-   "fair_decimal_odds": 690.61
+   "champion_pct": 0.13,
+   "fair_decimal_odds": 765.7
+  },
+  "Algeria": {
+   "reach": {
+    "Round of 16": 0.36974,
+    "Quarter-final": 0.12987,
+    "Semi-final": 0.02954,
+    "Final": 0.00632,
+    "Champion": 0.00117
+   },
+   "champion_pct": 0.12,
+   "fair_decimal_odds": 851.79
   },
   "Austria": {
    "reach": {
-    "Round of 16": 0.1787,
-    "Quarter-final": 0.04846,
-    "Semi-final": 0.01862,
-    "Final": 0.00563,
-    "Champion": 0.00151
+    "Round of 16": 0.18495,
+    "Quarter-final": 0.05024,
+    "Semi-final": 0.01779,
+    "Final": 0.00479,
+    "Champion": 0.00126
    },
-   "champion_pct": 0.15,
-   "fair_decimal_odds": 661.38
-  },
-  "Ivory Coast": {
-   "reach": {
-    "Round of 16": 0.40534,
-    "Quarter-final": 0.07852,
-    "Semi-final": 0.02264,
-    "Final": 0.00577,
-    "Champion": 0.00113
-   },
-   "champion_pct": 0.11,
-   "fair_decimal_odds": 886.52
+   "champion_pct": 0.13,
+   "fair_decimal_odds": 794.91
   },
   "Australia": {
    "reach": {
-    "Round of 16": 0.44861,
-    "Quarter-final": 0.07132,
-    "Semi-final": 0.02228,
-    "Final": 0.00435,
-    "Champion": 0.00072
+    "Round of 16": 0.44804,
+    "Quarter-final": 0.07008,
+    "Semi-final": 0.0218,
+    "Final": 0.00406,
+    "Champion": 0.00061
    },
-   "champion_pct": 0.07,
-   "fair_decimal_odds": 1381.22
+   "champion_pct": 0.06,
+   "fair_decimal_odds": 1633.99
   },
   "Ghana": {
    "reach": {
-    "Round of 16": 0.2503,
-    "Quarter-final": 0.09356,
-    "Semi-final": 0.01919,
-    "Final": 0.00374,
-    "Champion": 0.00065
+    "Round of 16": 0.2499,
+    "Quarter-final": 0.09247,
+    "Semi-final": 0.01873,
+    "Final": 0.00351,
+    "Champion": 0.00058
    },
-   "champion_pct": 0.07,
-   "fair_decimal_odds": 1533.74
+   "champion_pct": 0.06,
+   "fair_decimal_odds": 1712.33
   },
   "Cape Verde": {
    "reach": {
-    "Round of 16": 0.11482,
-    "Quarter-final": 0.05415,
-    "Semi-final": 0.01699,
-    "Final": 0.00319,
-    "Champion": 0.00051
-   },
-   "champion_pct": 0.05,
-   "fair_decimal_odds": 1968.5
-  },
-  "DR Congo": {
-   "reach": {
-    "Round of 16": 0.1577,
-    "Quarter-final": 0.05375,
-    "Semi-final": 0.01102,
-    "Final": 0.00223,
-    "Champion": 0.00038
+    "Round of 16": 0.11148,
+    "Quarter-final": 0.05212,
+    "Semi-final": 0.01609,
+    "Final": 0.00291,
+    "Champion": 0.00044
    },
    "champion_pct": 0.04,
-   "fair_decimal_odds": 2659.57
-  },
-  "Bosnia & Herzegovina": {
-   "reach": {
-    "Round of 16": 0.20564,
-    "Quarter-final": 0.04654,
-    "Semi-final": 0.006,
-    "Final": 0.00107,
-    "Champion": 0.00018
-   },
-   "champion_pct": 0.02,
-   "fair_decimal_odds": 5681.82
+   "fair_decimal_odds": 2293.58
   },
   "South Africa": {
    "reach": {
@@ -353,7 +287,73 @@
    "champion_pct": 0.0,
    "fair_decimal_odds": null
   },
+  "Sweden": {
+   "reach": {
+    "Round of 16": 0.0,
+    "Quarter-final": 0.0,
+    "Semi-final": 0.0,
+    "Final": 0.0,
+    "Champion": 0.0
+   },
+   "champion_pct": 0.0,
+   "fair_decimal_odds": null
+  },
+  "Senegal": {
+   "reach": {
+    "Round of 16": 0.0,
+    "Quarter-final": 0.0,
+    "Semi-final": 0.0,
+    "Final": 0.0,
+    "Champion": 0.0
+   },
+   "champion_pct": 0.0,
+   "fair_decimal_odds": null
+  },
+  "Bosnia & Herzegovina": {
+   "reach": {
+    "Round of 16": 0.0,
+    "Quarter-final": 0.0,
+    "Semi-final": 0.0,
+    "Final": 0.0,
+    "Champion": 0.0
+   },
+   "champion_pct": 0.0,
+   "fair_decimal_odds": null
+  },
   "Japan": {
+   "reach": {
+    "Round of 16": 0.0,
+    "Quarter-final": 0.0,
+    "Semi-final": 0.0,
+    "Final": 0.0,
+    "Champion": 0.0
+   },
+   "champion_pct": 0.0,
+   "fair_decimal_odds": null
+  },
+  "Ivory Coast": {
+   "reach": {
+    "Round of 16": 0.0,
+    "Quarter-final": 0.0,
+    "Semi-final": 0.0,
+    "Final": 0.0,
+    "Champion": 0.0
+   },
+   "champion_pct": 0.0,
+   "fair_decimal_odds": null
+  },
+  "Ecuador": {
+   "reach": {
+    "Round of 16": 0.0,
+    "Quarter-final": 0.0,
+    "Semi-final": 0.0,
+    "Final": 0.0,
+    "Champion": 0.0
+   },
+   "champion_pct": 0.0,
+   "fair_decimal_odds": null
+  },
+  "DR Congo": {
    "reach": {
     "Round of 16": 0.0,
     "Quarter-final": 0.0,
