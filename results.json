@@ -51,8 +51,16 @@
   "winner": "Switzerland",
   "score": "2-0"
  },
+ "Australia|Egypt": {
+  "winner": "Egypt",
+  "score": "1-1 (2-4 pens)"
+ },
  "Argentina|Cape Verde": {
   "winner": "Argentina",
   "score": "3-2"
+ },
+ "Colombia|Ghana": {
+  "winner": "Colombia",
+  "score": "1-0"
  }
 }

@@ -16,7 +16,7 @@ window.BRACKET_DATA = {
    "name": "Canada",
    "short": "Canada",
    "flag": "🇨🇦",
-   "elo": 1792.3
+   "elo": 1786.6
   },
   "Netherlands": {
    "name": "Netherlands",
@@ -28,7 +28,7 @@ window.BRACKET_DATA = {
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1898.9
+   "elo": 1904.6
   },
   "Germany": {
    "name": "Germany",
@@ -40,13 +40,13 @@ window.BRACKET_DATA = {
    "name": "Paraguay",
    "short": "Paraguay",
    "flag": "🇵🇾",
-   "elo": 1714.4
+   "elo": 1714.3
   },
   "France": {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2064.1
+   "elo": 2064.2
   },
   "Sweden": {
    "name": "Sweden",
@@ -58,7 +58,7 @@ window.BRACKET_DATA = {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1906.7
+   "elo": 1907.0
   },
   "Senegal": {
    "name": "Senegal",
@@ -70,7 +70,7 @@ window.BRACKET_DATA = {
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1899.8
+   "elo": 1899.5
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2081.2
+   "elo": 2081.5
   },
   "Austria": {
    "name": "Austria",
@@ -94,7 +94,7 @@ window.BRACKET_DATA = {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 1987.8
+   "elo": 1987.5
   },
   "Croatia": {
    "name": "Croatia",
@@ -106,7 +106,7 @@ window.BRACKET_DATA = {
    "name": "Brazil",
    "short": "Brazil",
    "flag": "🇧🇷",
-   "elo": 1960.5
+   "elo": 1960.6
   },
   "Japan": {
    "name": "Japan",
@@ -124,13 +124,13 @@ window.BRACKET_DATA = {
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1851.8
+   "elo": 1851.7
   },
   "Mexico": {
    "name": "Mexico",
    "short": "Mexico",
    "flag": "🇲🇽",
-   "elo": 1903.5
+   "elo": 1903.7
   },
   "Ecuador": {
    "name": "Ecuador",
@@ -142,7 +142,7 @@ window.BRACKET_DATA = {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1933.2
+   "elo": 1933.0
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@ window.BRACKET_DATA = {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1829.0
+   "elo": 1842.2
   },
   "Algeria": {
    "name": "Algeria",
@@ -166,7 +166,7 @@ window.BRACKET_DATA = {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1908.3
+   "elo": 1895.1
   },
   "Ghana": {
    "name": "Ghana",
@@ -184,13 +184,13 @@ window.BRACKET_DATA = {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1776.4
+   "elo": 1773.9
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2016.8
+   "elo": 2019.3
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -315,31 +315,35 @@ window.BRACKET_DATA = {
  ],
  "knockout_market": {
   "Canada|Morocco": {
-   "p_home_adv": 0.3514,
+   "p_home_adv": 0.3366,
    "date": "2026-07-04"
   },
   "Paraguay|France": {
-   "p_home_adv": 0.1179,
+   "p_home_adv": 0.1177,
    "date": "2026-07-04"
   },
   "Brazil|Norway": {
-   "p_home_adv": 0.6515,
+   "p_home_adv": 0.6517,
    "date": "2026-07-05"
   },
   "Mexico|England": {
-   "p_home_adv": 0.4573,
+   "p_home_adv": 0.4578,
    "date": "2026-07-06"
   },
   "USA|Belgium": {
-   "p_home_adv": 0.4901,
+   "p_home_adv": 0.4893,
    "date": "2026-07-07"
   },
   "Portugal|Spain": {
-   "p_home_adv": 0.3688,
+   "p_home_adv": 0.3679,
    "date": "2026-07-06"
   },
   "Argentina|Egypt": {
-   "p_home_adv": 0.7997,
+   "p_home_adv": 0.8043,
+   "date": "2026-07-07"
+  },
+  "Switzerland|Colombia": {
+   "p_home_adv": 0.4245,
    "date": "2026-07-07"
   }
  },
@@ -396,9 +400,17 @@ window.BRACKET_DATA = {
    "winner": "Switzerland",
    "score": "2-0"
   },
+  "Australia|Egypt": {
+   "winner": "Egypt",
+   "score": "1-1 (2-4 pens)"
+  },
   "Argentina|Cape Verde": {
    "winner": "Argentina",
    "score": "3-2"
+  },
+  "Colombia|Ghana": {
+   "winner": "Colombia",
+   "score": "1-0"
   }
  }
 };
