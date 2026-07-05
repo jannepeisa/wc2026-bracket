@@ -28,7 +28,7 @@
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1904.6
+   "elo": 1904.0
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2070.9
+   "elo": 2071.5
   },
   "Sweden": {
    "name": "Sweden",
@@ -82,7 +82,7 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2081.4
+   "elo": 2081.5
   },
   "Austria": {
    "name": "Austria",
@@ -94,7 +94,7 @@
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 1987.6
+   "elo": 1987.5
   },
   "Croatia": {
    "name": "Croatia",
@@ -106,7 +106,7 @@
    "name": "Brazil",
    "short": "Brazil",
    "flag": "🇧🇷",
-   "elo": 1964.9
+   "elo": 1965.3
   },
   "Japan": {
    "name": "Japan",
@@ -124,13 +124,13 @@
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1847.4
+   "elo": 1847.0
   },
   "Mexico": {
    "name": "Mexico",
    "short": "Mexico",
    "flag": "🇲🇽",
-   "elo": 1902.6
+   "elo": 1902.1
   },
   "Ecuador": {
    "name": "Ecuador",
@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1934.1
+   "elo": 1934.6
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1840.9
+   "elo": 1841.9
   },
   "Algeria": {
    "name": "Algeria",
@@ -166,7 +166,7 @@
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1896.4
+   "elo": 1895.4
   },
   "Ghana": {
    "name": "Ghana",
@@ -184,13 +184,13 @@
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1779.5
+   "elo": 1779.3
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2013.7
+   "elo": 2013.9
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -323,31 +323,31 @@
    "date": "2026-07-04"
   },
   "Brazil|Norway": {
-   "p_home_adv": 0.6628,
+   "p_home_adv": 0.6639,
    "date": "2026-07-05"
   },
   "Mexico|England": {
-   "p_home_adv": 0.4546,
+   "p_home_adv": 0.4534,
    "date": "2026-07-06"
   },
   "USA|Belgium": {
-   "p_home_adv": 0.4959,
+   "p_home_adv": 0.4958,
    "date": "2026-07-07"
   },
   "Portugal|Spain": {
-   "p_home_adv": 0.3683,
+   "p_home_adv": 0.3679,
    "date": "2026-07-06"
   },
   "Argentina|Egypt": {
-   "p_home_adv": 0.7937,
+   "p_home_adv": 0.7942,
    "date": "2026-07-07"
   },
   "Switzerland|Colombia": {
-   "p_home_adv": 0.4207,
+   "p_home_adv": 0.4235,
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7225,
+   "p_home_adv": 0.7239,
    "date": "2026-07-09"
   }
  },
