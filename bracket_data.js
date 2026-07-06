@@ -28,7 +28,7 @@ window.BRACKET_DATA = {
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1903.6
+   "elo": 1903.5
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@ window.BRACKET_DATA = {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2071.9
+   "elo": 2072.0
   },
   "Sweden": {
    "name": "Sweden",
@@ -58,7 +58,7 @@ window.BRACKET_DATA = {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1904.9
+   "elo": 1904.1
   },
   "Senegal": {
    "name": "Senegal",
@@ -70,7 +70,7 @@ window.BRACKET_DATA = {
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1901.6
+   "elo": 1902.4
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2080.7
+   "elo": 2081.0
   },
   "Austria": {
    "name": "Austria",
@@ -94,7 +94,7 @@ window.BRACKET_DATA = {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 1988.3
+   "elo": 1988.0
   },
   "Croatia": {
    "name": "Croatia",
@@ -184,13 +184,13 @@ window.BRACKET_DATA = {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1780.0
+   "elo": 1779.8
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2013.2
+   "elo": 2013.4
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -331,15 +331,15 @@ window.BRACKET_DATA = {
    "date": "2026-07-06"
   },
   "USA|Belgium": {
-   "p_home_adv": 0.4951,
+   "p_home_adv": 0.4976,
    "date": "2026-07-07"
   },
   "Portugal|Spain": {
-   "p_home_adv": 0.37,
+   "p_home_adv": 0.3693,
    "date": "2026-07-06"
   },
   "Argentina|Egypt": {
-   "p_home_adv": 0.793,
+   "p_home_adv": 0.7933,
    "date": "2026-07-07"
   },
   "Switzerland|Colombia": {
@@ -347,7 +347,7 @@ window.BRACKET_DATA = {
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7248,
+   "p_home_adv": 0.7251,
    "date": "2026-07-09"
   }
  },
