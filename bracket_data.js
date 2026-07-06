@@ -28,7 +28,7 @@ window.BRACKET_DATA = {
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1903.9
+   "elo": 1902.9
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@ window.BRACKET_DATA = {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2071.6
+   "elo": 2072.6
   },
   "Sweden": {
    "name": "Sweden",
@@ -58,7 +58,7 @@ window.BRACKET_DATA = {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1898.3
+   "elo": 1895.9
   },
   "Senegal": {
    "name": "Senegal",
@@ -70,7 +70,7 @@ window.BRACKET_DATA = {
    "name": "USA",
    "short": "USA",
    "flag": "🇺🇸",
-   "elo": 1908.2
+   "elo": 1910.6
   },
   "Bosnia & Herzegovina": {
    "name": "Bosnia & Herzegovina",
@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2081.7
+   "elo": 2082.2
   },
   "Austria": {
    "name": "Austria",
@@ -94,7 +94,7 @@ window.BRACKET_DATA = {
    "name": "Portugal",
    "short": "Portugal",
    "flag": "🇵🇹",
-   "elo": 1987.3
+   "elo": 1986.8
   },
   "Croatia": {
    "name": "Croatia",
@@ -124,7 +124,7 @@ window.BRACKET_DATA = {
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1844.8
+   "elo": 1841.0
   },
   "Mexico": {
    "name": "Mexico",
@@ -142,7 +142,7 @@ window.BRACKET_DATA = {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1931.2
+   "elo": 1935.0
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@ window.BRACKET_DATA = {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1844.3
+   "elo": 1843.9
   },
   "Algeria": {
    "name": "Algeria",
@@ -166,7 +166,7 @@ window.BRACKET_DATA = {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1893.0
+   "elo": 1893.4
   },
   "Ghana": {
    "name": "Ghana",
@@ -184,13 +184,13 @@ window.BRACKET_DATA = {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1780.0
+   "elo": 1778.2
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2013.2
+   "elo": 2015.0
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -331,27 +331,27 @@ window.BRACKET_DATA = {
    "date": "2026-07-06"
   },
   "USA|Belgium": {
-   "p_home_adv": 0.5143,
+   "p_home_adv": 0.5212,
    "date": "2026-07-07"
   },
   "Portugal|Spain": {
-   "p_home_adv": 0.3673,
+   "p_home_adv": 0.366,
    "date": "2026-07-06"
   },
   "Argentina|Egypt": {
-   "p_home_adv": 0.7928,
+   "p_home_adv": 0.7963,
    "date": "2026-07-07"
   },
   "Switzerland|Colombia": {
-   "p_home_adv": 0.4304,
+   "p_home_adv": 0.4292,
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7243,
+   "p_home_adv": 0.7266,
    "date": "2026-07-09"
   },
   "Norway|England": {
-   "p_home_adv": 0.3782,
+   "p_home_adv": 0.368,
    "date": "2026-07-11"
   }
  },
