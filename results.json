@@ -78,5 +78,9 @@
  "Mexico|England": {
   "winner": "England",
   "score": "2-3"
+ },
+ "Portugal|Spain": {
+  "winner": "Spain",
+  "score": "0-1"
  }
 }

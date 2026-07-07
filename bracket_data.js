@@ -28,7 +28,7 @@ window.BRACKET_DATA = {
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1904.0
+   "elo": 1903.6
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@ window.BRACKET_DATA = {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2071.5
+   "elo": 2071.9
   },
   "Sweden": {
    "name": "Sweden",
@@ -124,7 +124,7 @@ window.BRACKET_DATA = {
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1841.5
+   "elo": 1841.0
   },
   "Mexico": {
    "name": "Mexico",
@@ -142,7 +142,7 @@ window.BRACKET_DATA = {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1934.5
+   "elo": 1935.0
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@ window.BRACKET_DATA = {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1842.5
+   "elo": 1841.4
   },
   "Algeria": {
    "name": "Algeria",
@@ -166,7 +166,7 @@ window.BRACKET_DATA = {
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1894.8
+   "elo": 1895.9
   },
   "Ghana": {
    "name": "Ghana",
@@ -184,13 +184,13 @@ window.BRACKET_DATA = {
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1775.7
+   "elo": 1774.8
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2017.5
+   "elo": 2018.4
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -339,19 +339,19 @@ window.BRACKET_DATA = {
    "date": "2026-07-06"
   },
   "Argentina|Egypt": {
-   "p_home_adv": 0.8008,
+   "p_home_adv": 0.8025,
    "date": "2026-07-07"
   },
   "Switzerland|Colombia": {
-   "p_home_adv": 0.4253,
+   "p_home_adv": 0.4222,
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7238,
+   "p_home_adv": 0.7248,
    "date": "2026-07-09"
   },
   "Norway|England": {
-   "p_home_adv": 0.3691,
+   "p_home_adv": 0.3679,
    "date": "2026-07-11"
   }
  },
@@ -435,6 +435,10 @@ window.BRACKET_DATA = {
   "Mexico|England": {
    "winner": "England",
    "score": "2-3"
+  },
+  "Portugal|Spain": {
+   "winner": "Spain",
+   "score": "0-1"
   }
  }
 };
