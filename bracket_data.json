@@ -28,7 +28,7 @@
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1903.8
+   "elo": 1904.1
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2071.7
+   "elo": 2071.4
   },
   "Sweden": {
    "name": "Sweden",
@@ -58,7 +58,7 @@
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1912.4
+   "elo": 1912.3
   },
   "Senegal": {
    "name": "Senegal",
@@ -82,7 +82,7 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2064.5
+   "elo": 2064.6
   },
   "Austria": {
    "name": "Austria",
@@ -124,7 +124,7 @@
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1840.5
+   "elo": 1839.4
   },
   "Mexico": {
    "name": "Mexico",
@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1935.5
+   "elo": 1936.6
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1841.7
+   "elo": 1840.8
   },
   "Algeria": {
    "name": "Algeria",
@@ -166,7 +166,7 @@
    "name": "Colombia",
    "short": "Colombia",
    "flag": "🇨🇴",
-   "elo": 1895.6
+   "elo": 1896.5
   },
   "Ghana": {
    "name": "Ghana",
@@ -184,13 +184,13 @@
    "name": "Egypt",
    "short": "Egypt",
    "flag": "🇪🇬",
-   "elo": 1769.0
+   "elo": 1767.9
   },
   "Argentina": {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2024.2
+   "elo": 2025.3
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -339,23 +339,23 @@
    "date": "2026-07-06"
   },
   "Argentina|Egypt": {
-   "p_home_adv": 0.8129,
+   "p_home_adv": 0.8148,
    "date": "2026-07-07"
   },
   "Switzerland|Colombia": {
-   "p_home_adv": 0.423,
+   "p_home_adv": 0.4205,
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7244,
+   "p_home_adv": 0.7238,
    "date": "2026-07-09"
   },
   "Norway|England": {
-   "p_home_adv": 0.3667,
+   "p_home_adv": 0.3637,
    "date": "2026-07-11"
   },
   "Spain|Belgium": {
-   "p_home_adv": 0.706,
+   "p_home_adv": 0.7061,
    "date": "2026-07-10"
   }
  },
