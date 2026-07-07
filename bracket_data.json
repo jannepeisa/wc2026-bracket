@@ -28,7 +28,7 @@
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1901.2
+   "elo": 1902.2
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2074.3
+   "elo": 2073.3
   },
   "Sweden": {
    "name": "Sweden",
@@ -58,7 +58,7 @@
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1910.3
+   "elo": 1909.4
   },
   "Senegal": {
    "name": "Senegal",
@@ -82,7 +82,7 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2066.6
+   "elo": 2067.5
   },
   "Austria": {
    "name": "Austria",
@@ -124,7 +124,7 @@
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1839.8
+   "elo": 1839.3
   },
   "Mexico": {
    "name": "Mexico",
@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1936.2
+   "elo": 1936.7
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -347,15 +347,15 @@
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7303,
+   "p_home_adv": 0.7281,
    "date": "2026-07-09"
   },
   "Norway|England": {
-   "p_home_adv": 0.3648,
+   "p_home_adv": 0.3633,
    "date": "2026-07-11"
   },
   "Spain|Belgium": {
-   "p_home_adv": 0.7109,
+   "p_home_adv": 0.713,
    "date": "2026-07-10"
   }
  },
@@ -447,6 +447,10 @@
   "USA|Belgium": {
    "winner": "Belgium",
    "score": "1-4"
+  },
+  "Argentina|Egypt": {
+   "winner": "Argentina",
+   "score": "3-2"
   }
  }
 }
