@@ -28,7 +28,7 @@
    "name": "Morocco",
    "short": "Morocco",
    "flag": "🇲🇦",
-   "elo": 1901.0
+   "elo": 1902.1
   },
   "Germany": {
    "name": "Germany",
@@ -46,7 +46,7 @@
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2074.5
+   "elo": 2073.4
   },
   "Sweden": {
    "name": "Sweden",
@@ -347,7 +347,7 @@
    "date": "2026-07-07"
   },
   "France|Morocco": {
-   "p_home_adv": 0.7308,
+   "p_home_adv": 0.7284,
    "date": "2026-07-09"
   },
   "Norway|England": {
@@ -359,7 +359,7 @@
    "date": "2026-07-10"
   },
   "Argentina|Switzerland": {
-   "p_home_adv": 0.6945,
+   "p_home_adv": 0.6944,
    "date": "2026-07-12"
   }
  },
