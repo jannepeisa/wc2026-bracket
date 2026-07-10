@@ -58,7 +58,7 @@ window.BRACKET_DATA = {
    "name": "Belgium",
    "short": "Belgium",
    "flag": "🇧🇪",
-   "elo": 1912.7
+   "elo": 1912.1
   },
   "Senegal": {
    "name": "Senegal",
@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2064.2
+   "elo": 2064.8
   },
   "Austria": {
    "name": "Austria",
@@ -124,7 +124,7 @@ window.BRACKET_DATA = {
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1837.8
+   "elo": 1838.3
   },
   "Mexico": {
    "name": "Mexico",
@@ -142,7 +142,7 @@ window.BRACKET_DATA = {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1938.2
+   "elo": 1937.7
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@ window.BRACKET_DATA = {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1861.1
+   "elo": 1860.8
   },
   "Algeria": {
    "name": "Algeria",
@@ -190,7 +190,7 @@ window.BRACKET_DATA = {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2006.5
+   "elo": 2006.8
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -351,15 +351,15 @@ window.BRACKET_DATA = {
    "date": "2026-07-09"
   },
   "Norway|England": {
-   "p_home_adv": 0.3594,
+   "p_home_adv": 0.3608,
    "date": "2026-07-11"
   },
   "Spain|Belgium": {
-   "p_home_adv": 0.7052,
+   "p_home_adv": 0.7065,
    "date": "2026-07-10"
   },
   "Argentina|Switzerland": {
-   "p_home_adv": 0.6979,
+   "p_home_adv": 0.6986,
    "date": "2026-07-12"
   }
  },
