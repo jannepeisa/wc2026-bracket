@@ -124,7 +124,7 @@
    "name": "Norway",
    "short": "Norway",
    "flag": "🇳🇴",
-   "elo": 1839.9
+   "elo": 1839.7
   },
   "Mexico": {
    "name": "Mexico",
@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1936.1
+   "elo": 1936.3
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -154,7 +154,7 @@
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1859.7
+   "elo": 1860.4
   },
   "Algeria": {
    "name": "Algeria",
@@ -190,7 +190,7 @@
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2007.9
+   "elo": 2007.2
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -351,7 +351,7 @@
    "date": "2026-07-09"
   },
   "Norway|England": {
-   "p_home_adv": 0.3651,
+   "p_home_adv": 0.3644,
    "date": "2026-07-11"
   },
   "Spain|Belgium": {
@@ -359,7 +359,7 @@
    "date": "2026-07-10"
   },
   "Argentina|Switzerland": {
-   "p_home_adv": 0.7013,
+   "p_home_adv": 0.6995,
    "date": "2026-07-12"
   }
  },
