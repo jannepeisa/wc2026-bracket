@@ -46,7 +46,7 @@ window.BRACKET_DATA = {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2089.5
+   "elo": 2089.6
   },
   "Sweden": {
    "name": "Sweden",
@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2050.2
+   "elo": 2050.1
   },
   "Austria": {
    "name": "Austria",
@@ -154,7 +154,7 @@ window.BRACKET_DATA = {
    "name": "Switzerland",
    "short": "Switzerland",
    "flag": "🇨🇭",
-   "elo": 1861.0
+   "elo": 1859.5
   },
   "Algeria": {
    "name": "Algeria",
@@ -190,7 +190,7 @@ window.BRACKET_DATA = {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 2006.6
+   "elo": 2008.1
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -359,11 +359,11 @@ window.BRACKET_DATA = {
    "date": "2026-07-10"
   },
   "Argentina|Switzerland": {
-   "p_home_adv": 0.698,
+   "p_home_adv": 0.7017,
    "date": "2026-07-12"
   },
   "France|Spain": {
-   "p_home_adv": 0.5563,
+   "p_home_adv": 0.5565,
    "date": "2026-07-14"
   }
  },
@@ -471,6 +471,10 @@ window.BRACKET_DATA = {
   "Spain|Belgium": {
    "winner": "Spain",
    "score": "2-1"
+  },
+  "Norway|England": {
+   "winner": "England",
+   "score": "1-2"
   }
  }
 };
