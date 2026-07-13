@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1984.6
+   "elo": 1984.1
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -190,7 +190,7 @@
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 1964.9
+   "elo": 1965.4
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -367,7 +367,7 @@
    "date": "2026-07-14"
   },
   "England|Argentina": {
-   "p_home_adv": 0.5283,
+   "p_home_adv": 0.527,
    "date": "2026-07-15"
   }
  },
