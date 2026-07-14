@@ -46,7 +46,7 @@
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2088.4
+   "elo": 2086.3
   },
   "Sweden": {
    "name": "Sweden",
@@ -82,7 +82,7 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2051.3
+   "elo": 2053.4
   },
   "Austria": {
    "name": "Austria",
@@ -142,7 +142,7 @@
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1982.8
+   "elo": 1982.9
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -190,7 +190,7 @@
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 1966.7
+   "elo": 1966.6
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -363,11 +363,11 @@
    "date": "2026-07-12"
   },
   "France|Spain": {
-   "p_home_adv": 0.5532,
+   "p_home_adv": 0.5472,
    "date": "2026-07-14"
   },
   "England|Argentina": {
-   "p_home_adv": 0.5232,
+   "p_home_adv": 0.5233,
    "date": "2026-07-15"
   }
  },
