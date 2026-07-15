@@ -142,7 +142,7 @@ window.BRACKET_DATA = {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1981.5
+   "elo": 1981.0
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -190,7 +190,7 @@ window.BRACKET_DATA = {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 1968.0
+   "elo": 1968.5
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -367,7 +367,7 @@ window.BRACKET_DATA = {
    "date": "2026-07-14"
   },
   "England|Argentina": {
-   "p_home_adv": 0.5193,
+   "p_home_adv": 0.518,
    "date": "2026-07-15"
   }
  },
