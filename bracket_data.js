@@ -46,7 +46,7 @@ window.BRACKET_DATA = {
    "name": "France",
    "short": "France",
    "flag": "🇫🇷",
-   "elo": 2083.4
+   "elo": 2070.5
   },
   "Sweden": {
    "name": "Sweden",
@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2056.3
+   "elo": 2036.0
   },
   "Austria": {
    "name": "Austria",
@@ -142,7 +142,7 @@ window.BRACKET_DATA = {
    "name": "England",
    "short": "England",
    "flag": "🏴",
-   "elo": 1982.2
+   "elo": 1995.1
   },
   "DR Congo": {
    "name": "DR Congo",
@@ -190,7 +190,7 @@ window.BRACKET_DATA = {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 1967.3
+   "elo": 1987.6
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -369,6 +369,14 @@ window.BRACKET_DATA = {
   "England|Argentina": {
    "p_home_adv": 0.5213,
    "date": "2026-07-15"
+  },
+  "France|England": {
+   "p_home_adv": 0.6068,
+   "date": "2026-07-18"
+  },
+  "Spain|Argentina": {
+   "p_home_adv": 0.5693,
+   "date": "2026-07-19"
   }
  },
  "results": {
@@ -487,6 +495,10 @@ window.BRACKET_DATA = {
   "France|Spain": {
    "winner": "Spain",
    "score": "0-2"
+  },
+  "England|Argentina": {
+   "winner": "Argentina",
+   "score": "1-2"
   }
  }
 };
