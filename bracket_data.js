@@ -82,7 +82,7 @@ window.BRACKET_DATA = {
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2038.4
+   "elo": 2038.3
   },
   "Austria": {
    "name": "Austria",
@@ -190,7 +190,7 @@ window.BRACKET_DATA = {
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 1985.2
+   "elo": 1985.3
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -371,11 +371,11 @@ window.BRACKET_DATA = {
    "date": "2026-07-15"
   },
   "France|England": {
-   "p_home_adv": 0.6278,
+   "p_home_adv": 0.6279,
    "date": "2026-07-18"
   },
   "Spain|Argentina": {
-   "p_home_adv": 0.5759,
+   "p_home_adv": 0.5757,
    "date": "2026-07-19"
   }
  },
