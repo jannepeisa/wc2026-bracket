@@ -82,7 +82,7 @@
    "name": "Spain",
    "short": "Spain",
    "flag": "🇪🇸",
-   "elo": 2037.9
+   "elo": 2038.6
   },
   "Austria": {
    "name": "Austria",
@@ -190,7 +190,7 @@
    "name": "Argentina",
    "short": "Argentina",
    "flag": "🇦🇷",
-   "elo": 1985.7
+   "elo": 1985.0
   },
   "Cape Verde": {
    "name": "Cape Verde",
@@ -375,7 +375,7 @@
    "date": "2026-07-18"
   },
   "Spain|Argentina": {
-   "p_home_adv": 0.5747,
+   "p_home_adv": 0.5765,
    "date": "2026-07-19"
   }
  },
